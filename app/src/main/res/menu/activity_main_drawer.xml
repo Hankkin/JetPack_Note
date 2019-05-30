@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:tools="http://schemas.android.com/tools"
+      tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+                android:id="@+id/homeFragment"
+                android:icon="@drawable/ic_menu_home"
+                android:title="@string/menu_home"/>
+        <item
+                android:id="@+id/lifecyclesFragment"
+                android:icon="@drawable/ic_menu_live"
+                android:title="@string/menu_life_cycles"/>
+        <item
+                android:id="@+id/navigationFragment"
+                android:icon="@drawable/ic_menu_nav"
+                android:title="@string/menu_navigation"/>
+        <item
+                android:id="@+id/nav_live_data"
+                android:icon="@drawable/ic_menu_live"
+                android:title="@string/menu_live_data"/>
+
+        <item
+                android:id="@+id/nav_view_model"
+                android:icon="@drawable/ic_menu_view"
+                android:title="@string/menu_view_model"/>
+
+        <item
+                android:id="@+id/nav_paging"
+                android:icon="@drawable/ic_menu_share"
+                android:title="@string/menu_paging"/>
+    </group>
+
+    <item android:title="ToDo">
+        <menu>
+            <item
+                    android:id="@+id/nav_room"
+                    android:icon="@drawable/ic_menu_share"
+                    android:title="@string/menu_room"/>
+            <item
+                    android:id="@+id/nav_work_manager"
+                    android:icon="@drawable/ic_menu_send"
+                    android:title="@string/menu_work_manager"/>
+        </menu>
+    </item>
+
+</menu>

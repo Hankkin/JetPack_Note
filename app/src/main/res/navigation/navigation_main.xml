@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/navigation_main"
+            app:startDestination="@+id/homeFragment"
+            tools:ignore="UnusedNavigation">
+
+
+    <fragment android:id="@+id/homeFragment"
+              android:name="com.hankkin.jetpack_note.ui.HomeFragment"
+              android:label="@string/menu_home"/>
+
+    <fragment android:id="@+id/lifecyclesFragment"
+              android:name="com.hankkin.jetpack_note.ui.LifecyclesFragment"
+              android:label="@string/menu_life_cycles"/>
+
+    <fragment android:id="@+id/navigationFragment"
+              android:name="com.hankkin.jetpack_note.ui.NavigationFragment"
+              android:label="@string/menu_navigation"/>
+</navigation>
