@@ -1,4 +1,4 @@
-package com.hankkin.jetpack_note.ui
+package com.hankkin.jetpack_note.ui.home
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -9,6 +9,9 @@ import com.hankkin.jetpack_note.databinding.FragmentHomeBinding
 
 class HomeFragment : Fragment() {
 
+    private val viewModel: HomeListViewModel by viewModels {
+
+    }
 
     override fun onCreateView(inflater: LayoutInflater,
                               container: ViewGroup?,

@@ -15,6 +15,9 @@ buildscript {
         lifecycleVersion = '2.2.0-alpha01'
         navigationVersion = '2.0.0'
         materialVersion = '1.0.0'
+        roomVersion = '2.1.0-beta01'
+        workVersion = '2.1.0-alpha02'
+        gsonVersion = '2.8.2'
 
         supportLibraryVersion = '1.1.0-alpha05'
         constraintLayoutVersion = '2.0.0-beta1'

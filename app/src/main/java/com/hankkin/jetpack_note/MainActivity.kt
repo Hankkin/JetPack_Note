@@ -15,6 +15,7 @@ import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.hankkin.jetpack_note.databinding.ActivityMainBinding
+import com.hankkin.jetpack_note.utils.StatusBarUtil
 
 class MainActivity : AppCompatActivity(){
 
@@ -26,9 +27,10 @@ class MainActivity : AppCompatActivity(){
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
+        StatusBarUtil.setLightMode(this)
         mDataBinding = DataBindingUtil.setContentView(this,R.layout.activity_main)
         drawerLayout = mDataBinding.drawerLayout
-//        mDataBinding.toolbar.setTitleTextColor(resources.getColor(R.color.titleTxt))
+        mDataBinding.toolbar.setTitleTextColor(resources.getColor(R.color.titleTxt))
         navController = Navigation.findNavController(this, R.id.fragment_home)
         appBarConfiguration = AppBarConfiguration(navController.graph, drawerLayout)
         // Set up ActionBar

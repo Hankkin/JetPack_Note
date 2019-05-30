@@ -8,7 +8,7 @@
 
 
     <fragment android:id="@+id/homeFragment"
-              android:name="com.hankkin.jetpack_note.ui.HomeFragment"
+              android:name="com.hankkin.jetpack_note.ui.home.HomeFragment"
               android:label="@string/menu_home"/>
 
     <fragment android:id="@+id/lifecyclesFragment"

@@ -26,11 +26,16 @@ android {
 }
 
 dependencies {
+    kapt "androidx.room:room-compiler:$rootProject.roomVersion"
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation"org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlinVersion"
     implementation "androidx.appcompat:appcompat:$rootProject.supportLibraryVersion"
     implementation "androidx.core:core-ktx:$rootProject.supportLibraryVersion"
     implementation "com.google.android.material:material:$materialVersion"
+    implementation "androidx.room:room-runtime:$rootProject.roomVersion"
+    implementation "androidx.work:work-runtime-ktx:$rootProject.workVersion"
+    implementation "com.google.code.gson:gson:$rootProject.gsonVersion"
+
     //test
     implementation "androidx.legacy:legacy-support-v4:$materialVersion"
     testImplementation "junit:junit:$rootProject.junitVersion"
