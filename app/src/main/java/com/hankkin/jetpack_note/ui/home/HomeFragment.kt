@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
 import com.hankkin.jetpack_note.databinding.FragmentHomeBinding
 import com.hankkin.jetpack_note.utils.InjectorUtils
 
