@@ -28,12 +28,7 @@ class MainActivity : AppCompatActivity(){
 
         mDataBinding = DataBindingUtil.setContentView(this,R.layout.activity_main)
         drawerLayout = mDataBinding.drawerLayout
-//        val toggle = ActionBarDrawerToggle(
-//            this, drawerLayout, mDataBinding.toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close
-//        )
-//        drawerLayout.addDrawerListener(toggle)
-//        toggle.syncState()
-        mDataBinding.toolbar.setTitleTextColor(resources.getColor(R.color.titleTxt))
+//        mDataBinding.toolbar.setTitleTextColor(resources.getColor(R.color.titleTxt))
         navController = Navigation.findNavController(this, R.id.fragment_home)
         appBarConfiguration = AppBarConfiguration(navController.graph, drawerLayout)
         // Set up ActionBar
@@ -41,6 +36,12 @@ class MainActivity : AppCompatActivity(){
         setupActionBarWithNavController(navController, appBarConfiguration)
         // Set up navigation menu
         mDataBinding.navView.setupWithNavController(navController)
+
+        val toggle = ActionBarDrawerToggle(
+            this, drawerLayout, mDataBinding.toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close
+        )
+        drawerLayout.addDrawerListener(toggle)
+        toggle.syncState()
     }
 
     override fun onBackPressed() {

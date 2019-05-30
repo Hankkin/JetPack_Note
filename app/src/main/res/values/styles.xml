@@ -6,7 +6,6 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
-        <item name="drawerArrowStyle">@style/drawerArrowStyle</item>
         <item name="android:textAllCaps">false</item>
         <item name="android:screenOrientation">portrait</item>
         <item name="android:windowNoTitle">true</item>
@@ -14,10 +13,12 @@
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
     </style>
+
     <style name="AppTheme.NoActionBar">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
     </style>
+
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar"/>
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Dark">
         <item name="colorControlNormal">@color/titleTxt</item>
@@ -25,10 +26,6 @@
     </style>
 
 
-    <style name="drawerArrowStyle" parent="@style/Widget.AppCompat.DrawerArrowToggle">
-        <item name="spinBars">true</item>
-        <item name="color">@color/titleTxt</item>
-    </style>
 
     <style name="normalTxt">
         <item name="android:textColor">@color/titleTxt</item>
