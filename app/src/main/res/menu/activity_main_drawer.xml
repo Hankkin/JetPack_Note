@@ -9,39 +9,56 @@
                 android:icon="@drawable/ic_menu_home"
                 android:title="@string/menu_home"/>
         <item
-                android:id="@+id/lifecyclesFragment"
+                android:id="@+id/codeFragment"
                 android:icon="@drawable/ic_menu_code"
                 android:title="@string/menu_code"/>
-        <item
-                android:id="@+id/navigationFragment"
-                android:icon="@drawable/ic_menu_nav"
-                android:title="@string/menu_navigation"/>
-        <item
-                android:id="@+id/nav_live_data"
-                android:icon="@drawable/ic_menu_code"
-                android:title="@string/menu_live_data"/>
 
-        <item
-                android:id="@+id/nav_view_model"
-                android:icon="@drawable/ic_menu_view"
-                android:title="@string/menu_view_model"/>
+    </group>
+    <group android:checkableBehavior="single">
+        <item android:title="组件">
+            <menu>
+                <item
+                        android:id="@+id/navigationFragment"
+                        android:icon="@drawable/ic_menu_nav"
+                        android:title="@string/menu_navigation"/>
+                <item
+                        android:id="@+id/nav_live_data"
+                        android:icon="@drawable/ic_menu_code"
+                        android:title="@string/menu_live_data"/>
 
-        <item
-                android:id="@+id/nav_paging"
-                android:icon="@drawable/ic_menu_share"
-                android:title="@string/menu_paging"/>
+                <item
+                        android:id="@+id/nav_view_model"
+                        android:icon="@drawable/ic_menu_view"
+                        android:title="@string/menu_view_model"/>
+
+                <item
+                        android:id="@+id/nav_paging"
+                        android:icon="@drawable/ic_menu_share"
+                        android:title="@string/menu_paging"/>
+
+                <item
+                        android:id="@+id/nav_room"
+                        android:icon="@drawable/ic_menu_share"
+                        android:title="@string/menu_room"/>
+                <item
+                        android:id="@+id/nav_work_manager"
+                        android:icon="@drawable/ic_menu_send"
+                        android:title="@string/menu_work_manager"/>
+            </menu>
+        </item>
+
     </group>
 
-    <item android:title="ToDo">
+    <item android:title="其他">
         <menu>
             <item
-                    android:id="@+id/nav_room"
-                    android:icon="@drawable/ic_menu_share"
-                    android:title="@string/menu_room"/>
+                    android:id="@+id/nav_setting"
+                    android:icon="@drawable/ic_menu_setting"
+                    android:title="@string/menu_setting"/>
             <item
-                    android:id="@+id/nav_work_manager"
-                    android:icon="@drawable/ic_menu_send"
-                    android:title="@string/menu_work_manager"/>
+                    android:id="@+id/nav_about"
+                    android:icon="@drawable/ic_menu_about"
+                    android:title="@string/menu_about"/>
         </menu>
     </item>
 

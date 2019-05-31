@@ -1,10 +1,8 @@
 package com.hankkin.jetpack_note
 
-import android.os.Build
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
-import androidx.annotation.RequiresApi
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.GravityCompat
@@ -16,10 +14,11 @@ import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
+import com.google.android.material.navigation.NavigationView
 import com.hankkin.jetpack_note.databinding.ActivityMainBinding
 import com.hankkin.jetpack_note.utils.StatusBarUtil
 
-class MainActivity : AppCompatActivity(){
+class MainActivity : AppCompatActivity() {
 
     private lateinit var mDataBinding: ActivityMainBinding
     private lateinit var drawerLayout: DrawerLayout
@@ -30,7 +29,7 @@ class MainActivity : AppCompatActivity(){
         super.onCreate(savedInstanceState)
 
         StatusBarUtil.setLightMode(this)
-        mDataBinding = DataBindingUtil.setContentView(this,R.layout.activity_main)
+        mDataBinding = DataBindingUtil.setContentView(this, R.layout.activity_main)
         drawerLayout = mDataBinding.drawerLayout
         mDataBinding.toolbar.setTitleTextColor(resources.getColor(R.color.black))
         navController = Navigation.findNavController(this, R.id.fragment_home)

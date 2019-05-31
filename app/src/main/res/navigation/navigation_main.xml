@@ -11,8 +11,8 @@
               android:name="com.hankkin.jetpack_note.ui.home.HomeFragment"
               android:label="@string/menu_home"/>
 
-    <fragment android:id="@+id/lifecyclesFragment"
-              android:name="com.hankkin.jetpack_note.ui.LifecyclesFragment"
+    <fragment android:id="@+id/codeFragment"
+              android:name="com.hankkin.jetpack_note.ui.CodeFragment"
               android:label="@string/menu_code"/>
 
     <fragment android:id="@+id/navigationFragment"

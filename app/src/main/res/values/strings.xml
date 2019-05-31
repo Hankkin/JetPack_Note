@@ -13,7 +13,9 @@
     <string name="menu_live_data">LiveData</string>
     <string name="menu_view_model">ViewModel</string>
     <string name="menu_paging">Paging</string>
-
     <string name="menu_room">Room</string>
     <string name="menu_work_manager">WorkManager</string>
+
+    <string name="menu_setting">设置</string>
+    <string name="menu_about">关于</string>
 </resources>
