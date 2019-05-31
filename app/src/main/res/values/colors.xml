@@ -5,6 +5,8 @@
     <color name="colorAccent">#FFFFFF</color>
 
 
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
     <color name="titleTxt">#424242</color>
     <color name="subTitleTxt">#757575</color>
 </resources>

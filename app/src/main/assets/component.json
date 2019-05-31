@@ -1,0 +1,37 @@
+[
+  {
+    "id": "1",
+    "title": "Lifecycles",
+    "description": "管理您的 Activity 和 Fragment 生命周期"
+  },
+  {
+    "id": "2",
+    "title": "LiveData",
+    "description": "在底层数据库更改时通知视图"
+  },
+  {
+    "id": "3",
+    "title": "Navigation",
+    "description": "处理应用内导航所需的一切"
+  },
+  {
+    "id": "4",
+    "title": "ViewModel",
+    "description": "以注重生命周期的方式管理界面相关的数据"
+  },
+  {
+    "id": "5",
+    "title": "Paging",
+    "description": "逐步从您的数据源按需加载信息"
+  },
+  {
+    "id": "6",
+    "title": "Room",
+    "description": "流畅地访问 SQLite 数据库"
+  },
+  {
+    "id": "7",
+    "title": "WorkManager",
+    "description": "管理您的 Android 后台作业"
+  }
+]

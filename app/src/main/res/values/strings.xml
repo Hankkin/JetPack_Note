@@ -7,8 +7,8 @@
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
 
-    <string name="menu_home">Home</string>
-    <string name="menu_life_cycles">Lifecycles</string>
+    <string name="menu_home">首页</string>
+    <string name="menu_code">代码</string>
     <string name="menu_navigation">Navigation</string>
     <string name="menu_live_data">LiveData</string>
     <string name="menu_view_model">ViewModel</string>

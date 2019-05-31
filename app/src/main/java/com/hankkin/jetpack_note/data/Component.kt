@@ -10,9 +10,9 @@ import androidx.room.PrimaryKey
  */
 @Entity(tableName = "component")
 data class Component (
-    @PrimaryKey @ColumnInfo(name = "id") val id: Int,
+    @PrimaryKey @ColumnInfo(name = "id") val id: String,
     val title: String,
-    val icon: Int
+    val description: String
 ) {
     override fun toString() = title
 }

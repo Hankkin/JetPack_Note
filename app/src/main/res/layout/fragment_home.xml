@@ -1,9 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout
         xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto">
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
 
-    <androidx.recyclerview.widget.RecyclerView
+
+
+
+    <LinearLayout
+            android:background="@android:color/white"
+            android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"/>
+            android:layout_height="match_parent">
+        <ImageView
+                android:layout_marginTop="@dimen/dp10"
+                android:scaleType="fitXY"
+                android:src="@mipmap/jetpack_donut"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"/>
+        <androidx.recyclerview.widget.RecyclerView
+                android:layout_marginTop="@dimen/dp10"
+                android:id="@+id/rv_home"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                app:spanCount="2"
+                tools:listitem="@layout/list_item_home"/>
+    </LinearLayout>
 </layout>

@@ -7,6 +7,8 @@ package com.hankkin.jetpack_note.ui.home
 class HomeRepository private constructor(private val homeDao: HomeDao) {
 
 
+    fun getPlants() = homeDao.getComponents()
+
     companion object {
 
         // For Singleton instantiation

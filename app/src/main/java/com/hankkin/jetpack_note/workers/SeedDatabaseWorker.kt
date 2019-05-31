@@ -1,12 +1,12 @@
 package com.hankkin.jetpack_note.workers
 
 import android.content.Context
-import android.util.JsonReader
 import android.util.Log
 import androidx.work.CoroutineWorker
 import androidx.work.WorkerParameters
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
+import com.google.gson.stream.JsonReader
 import com.hankkin.jetpack_note.data.Component
 import com.hankkin.jetpack_note.data.AppDatabase
 import com.hankkin.jetpack_note.utils.COMPONENT_DATA_FILENAME

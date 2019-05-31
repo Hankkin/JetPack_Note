@@ -13,7 +13,7 @@
 
     <fragment android:id="@+id/lifecyclesFragment"
               android:name="com.hankkin.jetpack_note.ui.LifecyclesFragment"
-              android:label="@string/menu_life_cycles"/>
+              android:label="@string/menu_code"/>
 
     <fragment android:id="@+id/navigationFragment"
               android:name="com.hankkin.jetpack_note.ui.NavigationFragment"
