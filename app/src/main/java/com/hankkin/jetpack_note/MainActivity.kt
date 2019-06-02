@@ -16,6 +16,7 @@ import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.google.android.material.navigation.NavigationView
 import com.hankkin.jetpack_note.databinding.ActivityMainBinding
+import com.hankkin.jetpack_note.ui.WebFragment
 import com.hankkin.jetpack_note.utils.StatusBarUtil
 
 class MainActivity : AppCompatActivity() {
@@ -33,18 +34,12 @@ class MainActivity : AppCompatActivity() {
         drawerLayout = mDataBinding.drawerLayout
         mDataBinding.toolbar.setTitleTextColor(resources.getColor(R.color.black))
         navController = Navigation.findNavController(this, R.id.fragment_home)
-        appBarConfiguration = AppBarConfiguration(navController.graph, drawerLayout)
+        appBarConfiguration = AppBarConfiguration(setOf(R.id.homeFragment, R.id.codeFragment), drawerLayout)
         // Set up ActionBar
         setSupportActionBar(mDataBinding.toolbar)
         setupActionBarWithNavController(navController, appBarConfiguration)
         // Set up navigation menu
         mDataBinding.navView.setupWithNavController(navController)
-
-        val toggle = ActionBarDrawerToggle(
-            this, drawerLayout, mDataBinding.toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close
-        )
-        drawerLayout.addDrawerListener(toggle)
-        toggle.syncState()
     }
 
     override fun onBackPressed() {

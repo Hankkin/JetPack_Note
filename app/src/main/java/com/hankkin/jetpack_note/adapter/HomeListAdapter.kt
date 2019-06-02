@@ -3,11 +3,13 @@ package com.hankkin.jetpack_note.adapter
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.hankkin.jetpack_note.data.Component
 import com.hankkin.jetpack_note.databinding.ListItemHomeBinding
+import com.hankkin.jetpack_note.ui.home.HomeFragmentDirections
 
 class HomeListAdapter : ListAdapter<Component,HomeListAdapter.ViewHolder>((ComponentDiffCallback())){
 
@@ -20,14 +22,15 @@ class HomeListAdapter : ListAdapter<Component,HomeListAdapter.ViewHolder>((Compo
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val item = getItem(position)
         holder.apply {
-            bind(createOnClickListener(item.id),item)
+            bind(createOnClickListener(item.link, item.title),item)
             itemView.tag = item
         }
     }
 
-    private fun createOnClickListener(plantId: String): View.OnClickListener {
+    private fun createOnClickListener(link: String,title: String): View.OnClickListener {
         return View.OnClickListener {
-
+            val direction = HomeFragmentDirections.actionNavigationFragmentToWebFragment(link,title)
+            it.findNavController().navigate(direction)
         }
     }
 
@@ -48,7 +51,7 @@ class HomeListAdapter : ListAdapter<Component,HomeListAdapter.ViewHolder>((Compo
 private class ComponentDiffCallback : DiffUtil.ItemCallback<Component>() {
 
     override fun areItemsTheSame(oldItem: Component, newItem: Component): Boolean {
-        return oldItem.id == newItem.id
+        return oldItem.link == newItem.link
     }
 
     override fun areContentsTheSame(oldItem: Component, newItem: Component): Boolean {

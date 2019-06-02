@@ -9,4 +9,6 @@
     <color name="black">#000000</color>
     <color name="titleTxt">#424242</color>
     <color name="subTitleTxt">#757575</color>
+    <color name="colorProgressGradientStart">#f75acb</color>
+    <color name="colorProgressGradientEnd">#1ae8ff</color>
 </resources>

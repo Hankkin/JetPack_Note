@@ -36,4 +36,10 @@
         <item name="android:textColor">@color/titleTxt</item>
         <item name="android:textSize">@dimen/sp14</item>
     </style>
+
+    <declare-styleable name="CoolIndicator">
+        <attr name="wrapShiftDrawable" format="boolean"/>
+        <attr name="shiftDuration" format="reference"/>
+        <attr name="shiftInterpolator" format="reference"/>
+    </declare-styleable>
 </resources>

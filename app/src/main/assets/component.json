@@ -2,36 +2,43 @@
   {
     "id": "1",
     "title": "Lifecycles",
-    "description": "管理您的 Activity 和 Fragment 生命周期"
+    "description": "管理您的 Activity 和 Fragment 生命周期",
+    "link": "https://juejin.im/post/5cf3df3651882552046db134"
   },
   {
     "id": "2",
     "title": "LiveData",
-    "description": "在底层数据库更改时通知视图"
+    "description": "在底层数据库更改时通知视图",
+    "link": "https://juejin.im/post/5cf3df3651882552046db134"
   },
   {
     "id": "3",
     "title": "Navigation",
-    "description": "处理应用内导航所需的一切"
+    "description": "处理应用内导航所需的一切",
+    "link": "https://juejin.im/post/5cf37caee51d45777621bb2b"
   },
   {
     "id": "4",
     "title": "ViewModel",
-    "description": "以注重生命周期的方式管理界面相关的数据"
+    "description": "以注重生命周期的方式管理界面相关的数据",
+    "link": "https://juejin.im/post/5cf3df3651882552046db134"
   },
   {
     "id": "5",
     "title": "Paging",
-    "description": "逐步从您的数据源按需加载信息"
+    "description": "逐步从您的数据源按需加载信息",
+    "link": "https://juejin.im/post/5cf37caee51d45777621bb2b"
   },
   {
     "id": "6",
     "title": "Room",
-    "description": "流畅地访问 SQLite 数据库"
+    "description": "流畅地访问 SQLite 数据库",
+    "link": "https://juejin.im/post/5cf37caee51d45777621bb2b"
   },
   {
     "id": "7",
     "title": "WorkManager",
-    "description": "管理您的 Android 后台作业"
+    "description": "管理您的 Android 后台作业",
+    "link": "https://juejin.im/post/5cf37caee51d45777621bb2b"
   }
 ]

@@ -12,6 +12,8 @@
     </data>
 
     <androidx.cardview.widget.CardView
+            android:clickable="true"
+            android:focusable="true"
             app:cardElevation="2dp"
             app:cardCornerRadius="@dimen/dp2"
             android:layout_margin="@dimen/dp12"
@@ -22,8 +24,6 @@
             >
 
         <LinearLayout
-                android:focusable="true"
-                android:clickable="true"
                 android:background="?attr/selectableItemBackground"
                 android:padding="@dimen/dp10"
                 android:orientation="vertical"

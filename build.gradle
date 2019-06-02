@@ -19,6 +19,7 @@ buildscript {
         workVersion = '2.1.0-alpha02'
         gsonVersion = '2.8.2'
         fragmentVersion = '1.1.0-alpha09'
+        agentWebVersion = '4.0.2'
 
         supportLibraryVersion = '1.1.0-alpha05'
         constraintLayoutVersion = '2.0.0-beta1'
@@ -27,9 +28,9 @@ buildscript {
         espressoVersion = '3.1.1'
     }
     repositories {
+        maven { url 'https://maven.fabric.io/public' }
         google()
         jcenter()
-        maven { url 'https://maven.fabric.io/public' }
     }
     dependencies {
         classpath "com.android.tools.build:gradle:$gradleVersion"
@@ -40,9 +41,9 @@ buildscript {
 
 allprojects {
     repositories {
+        maven { url 'https://maven.fabric.io/public' }
         google()
         jcenter()
-        maven { url 'https://maven.fabric.io/public' }
     }
 }
 
