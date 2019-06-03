@@ -25,11 +25,25 @@
     <fragment android:id="@+id/navigationFragment"
               android:name="com.hankkin.jetpack_note.ui.NavigationFragment"
               android:label="@string/menu_navigation">
+        <action
+                android:id="@+id/action_navigationFragment_to_navSampleActivity"
+                app:destination="@id/navSampleActivity"
+                app:enterAnim="@anim/slide_in_right"
+                app:exitAnim="@anim/slide_out_left"
+                app:popEnterAnim="@anim/slide_in_left"
+                app:popExitAnim="@anim/slide_out_right"/>
+        <action
+                android:id="@+id/action_navigationFragment_to_bottomNavSampleActivity"
+                app:destination="@id/bottomNavSampleActivity"
+                app:enterAnim="@anim/slide_in_right"
+                app:exitAnim="@anim/slide_out_left"
+                app:popEnterAnim="@anim/slide_in_left"
+                app:popExitAnim="@anim/slide_out_right"/>
     </fragment>
 
     <fragment android:id="@+id/webFragment"
               android:name="com.hankkin.jetpack_note.ui.WebFragment"
-              android:label="WebFragment"
+              android:label=""
               tools:layout="@layout/fragment_web">
         <argument
                 android:name="link"
@@ -37,4 +51,13 @@
         <argument android:name="title"
                   app:argType="string"/>
     </fragment>
+    <activity android:id="@+id/navSampleActivity"
+              android:name="com.hankkin.jetpack_note.ui.sample.navigation.NavSampleActivity"
+              android:label="NavSampleActivity"
+              tools:layout="@layout/activity_nav_sample"/>
+
+    <activity android:id="@+id/bottomNavSampleActivity"
+              android:name="com.hankkin.jetpack_note.ui.sample.navigation.BottomNavSampleActivity"
+              android:label="NavSampleActivity"
+              tools:layout="@layout/activity_nav_sample"/>
 </navigation>

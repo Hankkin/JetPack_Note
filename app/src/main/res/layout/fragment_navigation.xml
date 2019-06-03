@@ -1,15 +1,63 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout
-        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools" xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto">
-    <LinearLayout
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:background="@color/white"
+            android:paddingLeft="@dimen/dp20"
+            android:paddingRight="@dimen/dp20"
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
+
+
         <androidx.appcompat.widget.AppCompatTextView
-                android:layout_gravity="center"
-                android:text="@string/menu_navigation"
-                android:layout_width="wrap_content"
+                android:id="@+id/tv_nav_title"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:gravity="center_horizontal"
+                android:textStyle="bold"
+                style="@style/normalTxt"
+                android:layout_marginTop="50dp"
+                android:text="@string/navigation_desc"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
-    </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatImageView
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:src="@drawable/undraw_navigation_lytx"
+                android:layout_width="0dp"
+                android:layout_height="358dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/tv_nav_title"
+                android:layout_marginTop="60dp"
+                android:layout_marginEnd="4dp"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_nav"
+                android:gravity="center"
+                style="@style/normalTxt"
+                android:background="@drawable/btn_shadow"
+                android:text="@string/drawerlayout_nav"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                app:layout_constraintBottom_toTopOf="@+id/btn_bottom"
+                android:layout_marginBottom="@dimen/dp20"
+        />
+
+        <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_bottom"
+                android:layout_marginBottom="50dp"
+                style="@style/normalTxt"
+                android:background="@drawable/btn_shadow"
+                android:text="@string/nav_bottom"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+        />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
 </layout>

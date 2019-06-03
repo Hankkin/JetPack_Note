@@ -26,7 +26,6 @@
     </style>
 
 
-
     <style name="normalTxt">
         <item name="android:textColor">@color/titleTxt</item>
         <item name="android:textSize">@dimen/sp16</item>
