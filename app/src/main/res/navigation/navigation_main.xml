@@ -52,12 +52,12 @@
                   app:argType="string"/>
     </fragment>
     <activity android:id="@+id/navSampleActivity"
-              android:name="com.hankkin.jetpack_note.ui.sample.navigation.NavSampleActivity"
+              android:name="com.hankkin.jetpack_note.ui.navigation.NavSampleActivity"
               android:label="NavSampleActivity"
               tools:layout="@layout/activity_nav_sample"/>
 
     <activity android:id="@+id/bottomNavSampleActivity"
-              android:name="com.hankkin.jetpack_note.ui.sample.navigation.BottomNavSampleActivity"
+              android:name="com.hankkin.jetpack_note.ui.navigation.BottomNavSampleActivity"
               android:label="NavSampleActivity"
               tools:layout="@layout/activity_nav_sample"/>
 </navigation>

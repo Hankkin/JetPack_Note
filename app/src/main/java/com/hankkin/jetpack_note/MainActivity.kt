@@ -3,7 +3,6 @@ package com.hankkin.jetpack_note
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
-import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.GravityCompat
 import androidx.databinding.DataBindingUtil
@@ -14,9 +13,7 @@ import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
-import com.google.android.material.navigation.NavigationView
 import com.hankkin.jetpack_note.databinding.ActivityMainBinding
-import com.hankkin.jetpack_note.ui.WebFragment
 import com.hankkin.jetpack_note.utils.StatusBarUtil
 
 class MainActivity : AppCompatActivity() {

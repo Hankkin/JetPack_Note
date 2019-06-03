@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout
+<LinearLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
         android:id="@+id/container"
+        android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:fitsSystemWindows="true"
-        tools:context=".ui.sample.navigation.BottomNavSampleActivity">
+        tools:context=".ui.navigation.BottomNavSampleActivity">
 
 
     <com.google.android.material.appbar.AppBarLayout
@@ -29,24 +30,22 @@
     </com.google.android.material.appbar.AppBarLayout>
 
 
-    <TextView
-            android:layout_gravity="center"
-            android:id="@+id/message"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/title_home"
-            />
+    <fragment
+            android:id="@+id/fragment_home_sample"
+            android:name="androidx.navigation.fragment.NavHostFragment"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            app:defaultNavHost="true"
+            app:navGraph="@navigation/navigation_bottom_sample"/>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
-            android:layout_gravity="bottom"
             app:itemIconTint="@color/nav_item_txt"
             app:itemTextColor="@color/nav_item_txt"
-            android:id="@+id/nav_view"
+            android:id="@+id/bottom_navigation_view"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="0dp"
-            android:layout_marginStart="0dp"
             android:background="?android:attr/windowBackground"
             app:menu="@menu/bottom_nav_menu"/>
 
-</androidx.coordinatorlayout.widget.CoordinatorLayout>
+</LinearLayout>

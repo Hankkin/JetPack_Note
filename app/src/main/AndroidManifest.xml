@@ -12,11 +12,11 @@
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
         <activity
-                android:name=".ui.sample.navigation.BottomNavSampleActivity"
+                android:name=".ui.navigation.BottomNavSampleActivity"
                 android:label="@string/title_activity_bottom_nav_sample">
         </activity>
         <activity
-                android:name=".ui.sample.navigation.NavSampleActivity"
+                android:name=".ui.navigation.NavSampleActivity"
                 android:label="@string/title_activity_nav_sample"
                 android:theme="@style/AppTheme.NoActionBar">
         </activity>

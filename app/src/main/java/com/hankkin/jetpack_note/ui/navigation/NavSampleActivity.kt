@@ -1,18 +1,15 @@
-package com.hankkin.jetpack_note.ui.sample.navigation
+package com.hankkin.jetpack_note.ui.navigation
 
 import android.os.Bundle
-import com.google.android.material.floatingactionbutton.FloatingActionButton
-import com.google.android.material.snackbar.Snackbar
-import androidx.core.view.GravityCompat
-import androidx.appcompat.app.ActionBarDrawerToggle
+import android.view.Menu
 import android.view.MenuItem
-import androidx.drawerlayout.widget.DrawerLayout
-import com.google.android.material.navigation.NavigationView
+import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
-import android.view.Menu
-import androidx.navigation.NavController
-import androidx.navigation.ui.AppBarConfiguration
+import androidx.core.view.GravityCompat
+import androidx.drawerlayout.widget.DrawerLayout
+import com.google.android.material.floatingactionbutton.FloatingActionButton
+import com.google.android.material.navigation.NavigationView
 import com.hankkin.jetpack_note.R
 import com.hankkin.jetpack_note.utils.StatusBarUtil
 import kotlinx.android.synthetic.main.activity_nav_sample.*

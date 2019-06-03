@@ -34,7 +34,7 @@
     <string name="smaple_file_desc">MainActivity \n navigation/navigation_main.xml \n menu/activtiy_main_drawer.xml
     </string>
     <string name="title_activity_bottom_nav_sample">BottomNavSampleActivity</string>
-    <string name="title_home">Home</string>
-    <string name="title_dashboard">Dashboard</string>
-    <string name="title_notifications">Notifications</string>
+    <string name="title_home">首页</string>
+    <string name="title_dashboard">工作台</string>
+    <string name="title_notifications">通知</string>
 </resources>
