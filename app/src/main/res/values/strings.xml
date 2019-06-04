@@ -36,5 +36,14 @@
     <string name="title_activity_bottom_nav_sample">BottomNavSampleActivity</string>
     <string name="title_home">首页</string>
     <string name="title_dashboard">工作台</string>
+    <string name="title_args">带参数传递的Fragment</string>
     <string name="title_notifications">通知</string>
+    <string name="navigation_sample_jump">跳转</string>
+    <string name="navigation_sample_jump_action">跳转(Action)</string>
+    <string name="navigation_sample_jump_arguments_normal">跳转(基本类型参数)</string>
+    <string name="navigation_sample_jump_arguments_bean">跳转(实体类参数)</string>
+    <string name="navigation_sample_jump_go_home">回到首页</string>
+    <string name="navigation_sample_deep_link">发送深层链接</string>
+    <string name="navigation_sample_deep_link_hint">请输入深层链接参数</string>
+    <string name="deep_link_args_hint">Deep Link 传递参数会显示在这...</string>
 </resources>

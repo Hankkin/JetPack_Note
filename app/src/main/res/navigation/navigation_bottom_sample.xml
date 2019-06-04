@@ -11,18 +11,63 @@
               android:label="@string/title_home"
               tools:layout="@layout/fragment_sample_home">
 
+        <action android:id="@+id/action_homeSampleFragment_to_dashBoardSampleFragment"
+                app:destination="@id/dashBoardSampleFragment"/>
+
+        <action android:id="@+id/action_homeSampleFragment_to_dashBoardSampleFragment_action"
+                app:destination="@id/dashBoardSampleFragment"
+                app:enterAnim="@anim/slide_in_right"
+                app:exitAnim="@anim/slide_out_left"
+                app:popEnterAnim="@anim/slide_in_left"
+                app:popExitAnim="@anim/slide_out_right"/>
+
+        <action android:id="@+id/action_homeSampleFragment_to_argsSampleFragment"
+                app:destination="@id/argsSampleFragment"/>
+
     </fragment>
 
 
     <fragment android:id="@+id/dashBoardSampleFragment"
               android:name="com.hankkin.jetpack_note.ui.navigation.SampleDashboardFragment"
               android:label="@string/title_dashboard"
-              tools:layout="@layout/fragment_sample_dashboard"/>
+              tools:layout="@layout/fragment_sample_dashboard">
+
+        <action android:id="@+id/action_dashBoardSampleFragment_to_notificationSampleFragment"
+                app:destination="@id/notificationSampleFragment"/>
+    </fragment>
+
+
+    <fragment android:id="@+id/argsSampleFragment"
+              android:name="com.hankkin.jetpack_note.ui.navigation.SampleArgsFragment"
+              android:label="@string/title_dashboard"
+              tools:layout="@layout/fragment_sample_args">
+
+        <argument
+                android:name="argument_flag"
+                app:argType="integer"/>
+
+        <argument
+                android:name="argument_normal"
+                app:argType="string"/>
+
+        <argument
+                android:name="argument_bean"
+                app:argType="com.hankkin.jetpack_note.data.Component"/>
+
+        <action android:id="@+id/action_argsSampleFragment_to_homeSampleFragment"
+                app:popUpTo="@id/homeSampleFragment"/>
+    </fragment>
 
     <fragment android:id="@+id/notificationSampleFragment"
               android:name="com.hankkin.jetpack_note.ui.navigation.SampleNotificationFragment"
               android:label="@string/title_notifications"
               tools:layout="@layout/fragment_sample_notification">
+
+        <action android:id="@+id/action_notificationSampleFragment_to_homeSampleFragment"
+                app:popUpTo="@id/homeSampleFragment"/>
+        <argument
+                android:name="deep_args"
+                />
     </fragment>
 
 </navigation>

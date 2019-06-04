@@ -1,13 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-             xmlns:tools="http://schemas.android.com/tools"
-             android:layout_width="match_parent"
-             android:layout_height="match_parent"
-             android:background="@color/white"
-             tools:context=".ui.navigation.SampleNotificationFragment">
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+                                              xmlns:tools="http://schemas.android.com/tools"
+                                              android:layout_width="match_parent"
+                                              android:layout_height="match_parent"
+                                              android:background="@color/white"
+                                              android:orientation="vertical"
+                                              tools:context=".ui.navigation.SampleNotificationFragment">
 
     <androidx.appcompat.widget.AppCompatImageView
-            android:src="@drawable/undraw_empty_xct9"
-            android:layout_width="wrap_content"
+            android:src="@drawable/undraw_mail_2_tqip"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"/>
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_deep_link_args_hint"
+            style="@style/smallTxt"
+            android:hint="@string/deep_link_args_hint"
+            android:layout_margin="@dimen/dp20"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
-</FrameLayout>
+
+    <androidx.appcompat.widget.AppCompatEditText
+
+            android:id="@+id/et_deep_link"
+            android:hint="@string/navigation_sample_deep_link_hint"
+            android:layout_marginLeft="@dimen/dp20"
+            android:layout_marginRight="@dimen/dp20"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+            android:layout_margin="@dimen/dp20"
+            android:id="@+id/btn_nav_deep_link"
+            android:gravity="center"
+            style="@style/normalTxt"
+            android:background="@drawable/btn_shadow"
+            android:text="@string/navigation_sample_deep_link"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+            android:layout_margin="@dimen/dp20"
+            android:id="@+id/btn_nav_dashboard_jump_home"
+            android:gravity="center"
+            style="@style/normalTxt"
+            android:background="@drawable/btn_shadow"
+            android:text="@string/navigation_sample_jump_go_home"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"/>
+
+</androidx.appcompat.widget.LinearLayoutCompat>

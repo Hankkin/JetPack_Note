@@ -30,6 +30,7 @@ class MainActivity : AppCompatActivity() {
         mDataBinding = DataBindingUtil.setContentView(this, R.layout.activity_main)
         drawerLayout = mDataBinding.drawerLayout
         mDataBinding.toolbar.setTitleTextColor(resources.getColor(R.color.black))
+
         navController = Navigation.findNavController(this, R.id.fragment_home)
         appBarConfiguration = AppBarConfiguration(setOf(R.id.homeFragment, R.id.codeFragment), drawerLayout)
         // Set up ActionBar

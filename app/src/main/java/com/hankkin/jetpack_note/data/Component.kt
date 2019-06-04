@@ -10,11 +10,11 @@ import java.io.Serializable
  * @date 2019-05-30
  */
 @Entity(tableName = "component")
-data class Component (
+data class Component(
     @PrimaryKey @ColumnInfo(name = "id") val id: String,
     val title: String,
     val description: String,
     val link: String
-){
+) : Serializable {
     override fun toString() = title
 }

@@ -5,10 +5,10 @@
                                               android:layout_height="match_parent"
                                               android:orientation="vertical"
                                               android:background="@color/white"
-                                              tools:context=".ui.navigation.SampleDashboardFragment">
+                                              tools:context=".ui.navigation.SampleArgsFragment">
 
     <androidx.appcompat.widget.AppCompatImageView
-            android:src="@drawable/undraw_empty_xct9"
+            android:src="@drawable/undraw_secure_data_0rwp"
             android:layout_width="wrap_content"
             android:layout_height="300dp"/>
 
@@ -20,17 +20,17 @@
             android:gravity="center"
             android:textStyle="bold"
             style="@style/normalTxt"
-            android:id="@+id/tv_sample_dashboard_content"
+            android:id="@+id/tv_sample_args_content"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
 
     <androidx.appcompat.widget.AppCompatButton
             android:layout_margin="@dimen/dp20"
-            android:id="@+id/btn_nav_dashboard_jump"
+            android:id="@+id/btn_nav_args_jump"
             android:gravity="center"
             style="@style/normalTxt"
             android:background="@drawable/btn_shadow"
-            android:text="@string/navigation_sample_jump"
+            android:text="@string/navigation_sample_jump_go_home"
             android:layout_width="match_parent"
             android:layout_height="40dp"
     />
