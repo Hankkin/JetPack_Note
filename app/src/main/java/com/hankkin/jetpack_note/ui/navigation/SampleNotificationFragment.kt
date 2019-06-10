@@ -14,6 +14,7 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.google.android.material.snackbar.Snackbar
 import com.hankkin.jetpack_note.R
+import com.hankkin.jetpack_note.ext.snackBarShow
 import kotlinx.android.synthetic.main.fragment_sample_notification.*
 
 /**
@@ -65,7 +66,7 @@ class SampleNotificationFragment : Fragment() {
                 .setAutoCancel(true)
             notificationManager.notify(0, builder.build())
 
-            Snackbar.make(view, "已发送深层链接通知，请在通知栏查看", Snackbar.LENGTH_LONG).show()
+            requireActivity().snackBarShow(view,getString(R.string.deeplink_hint))
         }
     }
 

@@ -6,6 +6,9 @@
     <string name="nav_header_subtitle">Android Architecture Components Note</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
+    <string name="action_website">浏览器打开</string>
+    <string name="action_share">分享</string>
+    <string name="action_copy">复制链接</string>
 
     <string name="menu_home">首页</string>
     <string name="menu_code">代码</string>
@@ -46,4 +49,6 @@
     <string name="navigation_sample_deep_link">发送深层链接</string>
     <string name="navigation_sample_deep_link_hint">请输入深层链接参数</string>
     <string name="deep_link_args_hint">Deep Link 传递参数会显示在这...</string>
+    <string name="clip_hint">已复制到剪切板</string>
+    <string name="deeplink_hint">已发送深层链接通知，请在通知栏查看</string>
 </resources>

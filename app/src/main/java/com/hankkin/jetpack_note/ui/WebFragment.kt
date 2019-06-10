@@ -1,14 +1,16 @@
 package com.hankkin.jetpack_note.ui
 
 import android.os.Bundle
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
+import android.view.*
 import android.widget.LinearLayout
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.navArgs
+import com.hankkin.jetpack_note.R
 import com.hankkin.jetpack_note.component.CoolIndicatorLayout
 import com.hankkin.jetpack_note.databinding.FragmentWebBinding
+import com.hankkin.jetpack_note.ext.clipTxt
+import com.hankkin.jetpack_note.ext.snackBarShow
+import com.hankkin.jetpack_note.utils.CommonUtils
 import com.just.agentweb.AgentWeb
 import com.just.agentweb.AgentWebSettingsImpl
 import com.just.agentweb.DefaultWebClient
@@ -18,6 +20,7 @@ class WebFragment : Fragment() {
 
     private val args: WebFragmentArgs by navArgs()
     private lateinit var mAgentWeb: AgentWeb
+    private lateinit var binding: FragmentWebBinding
 
 
     override fun onCreateView(
@@ -25,13 +28,14 @@ class WebFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val binding = FragmentWebBinding.inflate(inflater, container, false);
+        setHasOptionsMenu(true)
+        binding = FragmentWebBinding.inflate(inflater, container, false)
         requireActivity().toolbar.title = args.title
-        initWeb(binding)
+        initWeb()
         return binding.root
     }
 
-    private fun initWeb(binding: FragmentWebBinding) {
+    private fun initWeb() {
         mAgentWeb = AgentWeb.with(this)
             .setAgentWebParent(binding.webView, LinearLayout.LayoutParams(-1, -1))
             .setCustomIndicator(CoolIndicatorLayout(context))
@@ -42,6 +46,27 @@ class WebFragment : Fragment() {
             .createAgentWeb()
             .go(args.link)
 
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        inflater.inflate(R.menu.web_menu, menu)
+        menu.findItem(R.id.action_settings).isVisible = false
+        super.onCreateOptionsMenu(menu, inflater)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when (item.itemId) {
+            R.id.action_share -> CommonUtils.share(requireActivity(), args.link)
+            R.id.action_website -> CommonUtils.openBrowser(requireActivity(), args.link)
+            R.id.action_copy -> {
+                requireActivity().clipTxt(args.link)
+                requireActivity().snackBarShow(binding.llCommonWeb, getString(R.string.clip_hint))
+            }
+            else -> {
+                return false
+            }
+        }
+        return super.onOptionsItemSelected(item)
     }
 
 
