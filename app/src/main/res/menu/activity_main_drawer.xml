@@ -15,7 +15,7 @@
 
     </group>
     <group android:checkableBehavior="single">
-        <item android:title="组件">
+        <item android:title="@string/demo">
             <menu>
 
                 <item
@@ -55,7 +55,7 @@
 
     </group>
 
-    <item android:title="其他">
+    <item android:title="@string/other">
         <menu>
             <item
                     android:id="@+id/nav_setting"
