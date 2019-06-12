@@ -55,6 +55,10 @@ class LifecyclesFragment : Fragment() {
             mGpsListener = MyLocationListener()
             requestPermission()
         }
+        btn_life_recommend.setOnClickListener {
+            ll_life_hint.visibility = View.VISIBLE
+            iv_life.visibility = View.GONE
+        }
     }
 
 

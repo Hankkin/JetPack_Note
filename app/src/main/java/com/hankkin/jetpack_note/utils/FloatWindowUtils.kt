@@ -29,7 +29,7 @@ object FloatWindowUtils {
             .setWidth(Screen.width, 0.7f) //设置悬浮控件宽高
             .setHeight(Screen.height, 0.3f)
             .setX(Screen.width, 0.3f)
-            .setY(Screen.height, 0.08f)
+            .setY(Screen.height, 0.45f)
             .setMoveType(MoveType.slide, 100, 0)
             .setMoveStyle(500, BounceInterpolator())
             .setDesktopShow(true)

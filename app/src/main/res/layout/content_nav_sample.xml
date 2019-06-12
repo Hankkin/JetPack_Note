@@ -12,7 +12,7 @@
 
     <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/iv_sample"
-            android:src="@drawable/undraw_click_here_2li1"
+            android:src="@mipmap/bg_sample_drawerlayout"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
             android:layout_width="411dp"

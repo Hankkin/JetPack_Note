@@ -8,7 +8,7 @@
                                               tools:context=".ui.navigation.SampleNotificationFragment">
 
     <androidx.appcompat.widget.AppCompatImageView
-            android:src="@drawable/undraw_mail_2_tqip"
+            android:src="@mipmap/bg_notification"
             android:layout_width="match_parent"
             android:layout_height="300dp"/>
 
@@ -35,7 +35,7 @@
             android:id="@+id/btn_nav_deep_link"
             android:gravity="center"
             style="@style/normalTxt"
-            android:background="@drawable/btn_shadow"
+            android:background="@drawable/btn_theme"
             android:text="@string/navigation_sample_deep_link"
             android:layout_width="match_parent"
             android:layout_height="40dp"/>
@@ -45,7 +45,7 @@
             android:id="@+id/btn_nav_dashboard_jump_home"
             android:gravity="center"
             style="@style/normalTxt"
-            android:background="@drawable/btn_shadow"
+            android:background="@drawable/btn_theme"
             android:text="@string/navigation_sample_jump_go_home"
             android:layout_width="match_parent"
             android:layout_height="40dp"/>

@@ -25,7 +25,7 @@
     <include layout="@layout/content_nav_sample"/>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:backgroundTint="#FF4081"
+            android:backgroundTint="@color/theme"
             android:id="@+id/fab"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

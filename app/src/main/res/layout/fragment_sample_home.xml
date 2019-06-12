@@ -8,7 +8,7 @@
                                               tools:context=".ui.navigation.SampleHomeFragment">
 
     <androidx.appcompat.widget.AppCompatImageView
-            android:src="@drawable/undraw_track_and_field_33qn"
+            android:src="@mipmap/bg_jump"
             android:layout_width="match_parent"
             android:layout_height="300dp"/>
 
@@ -18,7 +18,7 @@
             android:id="@+id/btn_nav_sample_jump"
             android:gravity="center"
             style="@style/normalTxt"
-            android:background="@drawable/btn_shadow"
+            android:background="@drawable/btn_theme"
             android:text="@string/navigation_sample_jump"
             android:layout_width="match_parent"
             android:layout_height="40dp"
@@ -29,7 +29,7 @@
             android:id="@+id/btn_nav_sample_jump_action"
             android:gravity="center"
             style="@style/normalTxt"
-            android:background="@drawable/btn_shadow"
+            android:background="@drawable/btn_theme"
             android:text="@string/navigation_sample_jump_action"
             android:layout_width="match_parent"
             android:layout_height="40dp"
@@ -42,7 +42,7 @@
             android:id="@+id/btn_nav_sample_jump_argument_normal"
             android:gravity="center"
             style="@style/normalTxt"
-            android:background="@drawable/btn_shadow"
+            android:background="@drawable/btn_theme"
             android:text="@string/navigation_sample_jump_arguments_normal"
             android:layout_width="match_parent"
             android:layout_height="40dp"
@@ -55,7 +55,7 @@
             android:id="@+id/btn_nav_sample_jump_argument_bean"
             android:gravity="center"
             style="@style/normalTxt"
-            android:background="@drawable/btn_shadow"
+            android:background="@drawable/btn_theme"
             android:text="@string/navigation_sample_jump_arguments_bean"
             android:layout_width="match_parent"
             android:layout_height="40dp"

@@ -99,4 +99,5 @@
     <string name="lifecycles_hint">1. 开启监听按钮，并打开悬浮控制台 \n2.开启定位后，会在控制台打印出监听的生命周期状态\n3. 返回桌面或者进入后台，查看控制台输出变化</string>
     <string name="demo">Demo 演示</string>
     <string name="other">其他</string>
+    <string name="life_recommend">提示</string>
 </resources>

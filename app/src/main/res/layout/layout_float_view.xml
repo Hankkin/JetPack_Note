@@ -50,37 +50,38 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
             <androidx.appcompat.widget.AppCompatButton
+                    android:textColor="@color/white"
                     android:gravity="center"
-                    android:layout_marginEnd="@dimen/dp10"
-                    style="@style/normalTxt"
                     android:id="@+id/btn_float_clear"
-                    android:textSize="@dimen/sp16"
+                    android:textSize="@dimen/sp14"
                     android:paddingRight="@dimen/dp10"
                     android:paddingLeft="@dimen/dp10"
-                    android:background="@drawable/btn_shadow"
+                    android:background="@drawable/btn_theme"
                     android:text="@string/clear"
                     android:layout_weight="1"
                     android:layout_width="0dp"
                     android:layout_height="30dp"/>
 
             <androidx.appcompat.widget.AppCompatButton
+                    android:textColor="@color/white"
                     android:gravity="center"
                     android:layout_marginStart="@dimen/dp10"
-                    android:textSize="@dimen/sp16"
+                    android:textSize="@dimen/sp14"
                     android:paddingRight="@dimen/dp10"
                     android:paddingLeft="@dimen/dp10"
-                    android:background="@drawable/btn_shadow"
+                    android:background="@drawable/btn_theme"
                     android:text="@string/move"
                     android:layout_weight="1"
                     android:layout_width="0dp"
                     android:layout_height="30dp"/>
 
             <androidx.appcompat.widget.AppCompatButton
-                    android:background="@drawable/btn_shadow"
+                    android:background="@drawable/btn_theme"
+                    android:textColor="@color/white"
                     android:gravity="center"
                     android:id="@+id/btn_float_close"
                     android:layout_marginStart="@dimen/dp10"
-                    android:textSize="@dimen/sp16"
+                    android:textSize="@dimen/sp14"
                     android:paddingRight="@dimen/dp10"
                     android:paddingLeft="@dimen/dp10"
                     android:text="@string/close"

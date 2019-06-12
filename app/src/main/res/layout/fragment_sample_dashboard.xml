@@ -8,7 +8,7 @@
                                               tools:context=".ui.navigation.SampleDashboardFragment">
 
     <androidx.appcompat.widget.AppCompatImageView
-            android:src="@drawable/undraw_empty_xct9"
+            android:src="@mipmap/bg_work"
             android:layout_width="wrap_content"
             android:layout_height="300dp"/>
 
@@ -29,7 +29,7 @@
             android:id="@+id/btn_nav_dashboard_jump"
             android:gravity="center"
             style="@style/normalTxt"
-            android:background="@drawable/btn_shadow"
+            android:background="@drawable/btn_theme"
             android:text="@string/navigation_sample_jump"
             android:layout_width="match_parent"
             android:layout_height="40dp"
