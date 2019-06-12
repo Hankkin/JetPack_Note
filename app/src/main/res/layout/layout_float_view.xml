@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<androidx.cardview.widget.CardView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        app:cardCornerRadius="@dimen/dp4"
+        app:cardElevation="@dimen/dp4"
+        android:backgroundTint="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <LinearLayout
+            android:padding="@dimen/dp10"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <androidx.appcompat.widget.AppCompatTextView
+                style="@style/normalTxt"
+                android:textColor="@color/theme"
+                android:text="Logcat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        <ScrollView
+                android:padding="@dimen/dp10"
+                android:layout_marginBottom="@dimen/dp10"
+                android:layout_marginTop="@dimen/dp10"
+                android:background="#f0f0f0"
+                android:layout_weight="1"
+                android:minHeight="200dp"
+                android:layout_width="match_parent"
+                android:layout_height="0dp">
+            <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                <LinearLayout
+                        android:id="@+id/ll_flow_content"
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+
+        <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            <androidx.appcompat.widget.AppCompatButton
+                    android:gravity="center"
+                    android:layout_marginEnd="@dimen/dp10"
+                    style="@style/normalTxt"
+                    android:id="@+id/btn_float_clear"
+                    android:textSize="@dimen/sp16"
+                    android:paddingRight="@dimen/dp10"
+                    android:paddingLeft="@dimen/dp10"
+                    android:background="@drawable/btn_shadow"
+                    android:text="@string/clear"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                    android:gravity="center"
+                    android:layout_marginStart="@dimen/dp10"
+                    android:textSize="@dimen/sp16"
+                    android:paddingRight="@dimen/dp10"
+                    android:paddingLeft="@dimen/dp10"
+                    android:background="@drawable/btn_shadow"
+                    android:text="@string/move"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                    android:background="@drawable/btn_shadow"
+                    android:gravity="center"
+                    android:id="@+id/btn_float_close"
+                    android:layout_marginStart="@dimen/dp10"
+                    android:textSize="@dimen/sp16"
+                    android:paddingRight="@dimen/dp10"
+                    android:paddingLeft="@dimen/dp10"
+                    android:text="@string/close"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</androidx.cardview.widget.CardView>
+
+

@@ -15,6 +15,7 @@ import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.hankkin.jetpack_note.databinding.ActivityMainBinding
 import com.hankkin.jetpack_note.utils.StatusBarUtil
+import com.yhao.floatwindow.FloatWindow
 
 class MainActivity : AppCompatActivity() {
 

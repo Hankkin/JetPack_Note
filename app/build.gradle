@@ -43,10 +43,18 @@ dependencies {
     implementation "com.google.code.gson:gson:$rootProject.gsonVersion"
     implementation "androidx.fragment:fragment-ktx:$rootProject.fragmentVersion"
     implementation "com.just.agentweb:agentweb:$rootProject.agentWebVersion"
+    implementation "androidx.navigation:navigation-fragment-ktx:$rootProject.navigationVersion"
+    implementation "androidx.navigation:navigation-ui-ktx:$rootProject.navigationVersion"
+
+
+    implementation "thereisnospon.codeview:codeview:0.3.1"
+    implementation "com.github.yhaolpz:FloatWindow:1.0.9"
+    implementation 'com.github.tbruyelle:rxpermissions:0.10.2'
+
+    implementation 'io.reactivex.rxjava2:rxjava:2.2.8'
+    implementation 'io.reactivex.rxjava2:rxandroid:2.1.1'
 
     //test
     implementation "androidx.legacy:legacy-support-v4:$materialVersion"
     testImplementation "junit:junit:$rootProject.junitVersion"
-    implementation 'androidx.navigation:navigation-fragment-ktx:2.0.0'
-    implementation 'androidx.navigation:navigation-ui-ktx:2.0.0'
 }

@@ -2,6 +2,7 @@
     <item name="ic_menu_home" type="drawable">@drawable/menu_home</item>
     <item name="ic_menu_nav" type="drawable">@drawable/menu_nav</item>
     <item name="ic_menu_code" type="drawable">@drawable/menu_code</item>
+    <item name="ic_menu_lifecycle" type="drawable">@drawable/menu_circle</item>
     <item name="ic_menu_view" type="drawable">@android:drawable/ic_menu_more</item>
     <item name="ic_menu_paging" type="drawable">@android:drawable/ic_menu_rotate</item>
     <item name="ic_menu_send" type="drawable">@android:drawable/ic_menu_send</item>

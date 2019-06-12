@@ -60,4 +60,8 @@
               android:name="com.hankkin.jetpack_note.ui.navigation.BottomNavSampleActivity"
               android:label="NavSampleActivity"
               tools:layout="@layout/activity_nav_sample"/>
+
+    <fragment android:id="@+id/lifecyclesFragment"
+              android:name="com.hankkin.jetpack_note.ui.lifecycles.LifecyclesFragment"
+              android:label="Lifecycles"/>
 </navigation>

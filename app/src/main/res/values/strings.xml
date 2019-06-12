@@ -12,6 +12,7 @@
 
     <string name="menu_home">首页</string>
     <string name="menu_code">代码</string>
+    <string name="menu_lifecycle">Lifecycles</string>
     <string name="menu_navigation">Navigation</string>
     <string name="menu_live_data">LiveData</string>
     <string name="menu_view_model">ViewModel</string>
@@ -51,4 +52,49 @@
     <string name="deep_link_args_hint">Deep Link 传递参数会显示在这...</string>
     <string name="clip_hint">已复制到剪切板</string>
     <string name="deeplink_hint">已发送深层链接通知，请在通知栏查看</string>
+    <string name="clear">清空</string>
+    <string name="close">关闭</string>
+    <string name="move">拖动</string>
+
+    <string name="lifecycle_codes">
+        static class BoundLocationListener implements LifecycleObserver {\n"
+        "        private final Context mContext;\n"
+        "        private LocationManager mLocationManager;\n"
+        "        private final LocationListener mListener;\n"
+        "\n"
+        "        BoundLocationListener(LifecycleOwner lifecycleOwner,\n"
+        "                              LocationListener listener, Context context) {\n"
+        "            mContext = context;\n"
+        "            mListener = listener;\n"
+        "            lifecycleOwner.getLifecycle().addObserver(this);\n"
+        "        }\n"
+        "\n"
+        "        @OnLifecycleEvent(Lifecycle.Event.ON_RESUME)\n"
+        "        void addLocationListener() {\n"
+        "            mLocationManager = (LocationManager) mContext.getSystemService(Context.LOCATION_SERVICE);\n"
+        "            mLocationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 0, 0, mListener);\n"
+        "            FloatWindowUtils.INSTANCE.addViewContent(\"ON_RESUME--开启定位监听\");\n"
+        "            Location lastLocation = mLocationManager.getLastKnownLocation(\n"
+        "                    LocationManager.GPS_PROVIDER);\n"
+        "            if (lastLocation != null) {\n"
+        "                mListener.onLocationChanged(lastLocation);\n"
+        "            }\n"
+        "        }\n"
+        "\n"
+        "\n"
+        "        @OnLifecycleEvent(Lifecycle.Event.ON_PAUSE)\n"
+        "        void removeLocationListener() {\n"
+        "            if (mLocationManager == null) {\n"
+        "                return;\n"
+        "            }\n"
+        "            mLocationManager.removeUpdates(mListener);\n"
+        "            mLocationManager = null;\n"
+        "            FloatWindowUtils.INSTANCE.addViewContent(\"ON_PAUSE--停止定位监听\");\n"
+        "        }\n"
+        "    }</string>
+    <string name="start_monitor">开启监听</string>
+    <string name="start_location">开启定位</string>
+    <string name="location_msg">位置信息</string>
+    <string name="recommend">提示：</string>
+    <string name="lifecycles_hint">1. 开启监听按钮，并打开悬浮控制台 \n2.开启定位后，会在控制台打印出监听的生命周期状态\n3. 返回桌面或者进入后台，查看控制台输出变化</string>
 </resources>

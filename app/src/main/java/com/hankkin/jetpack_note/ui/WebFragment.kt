@@ -45,7 +45,6 @@ class WebFragment : Fragment() {
             .setOpenOtherPageWays(DefaultWebClient.OpenOtherPageWays.ASK)
             .createAgentWeb()
             .go(args.link)
-
     }
 
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
