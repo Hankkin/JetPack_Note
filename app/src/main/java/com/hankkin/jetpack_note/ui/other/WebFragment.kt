@@ -1,4 +1,4 @@
-package com.hankkin.jetpack_note.ui
+package com.hankkin.jetpack_note.ui.other
 
 import android.os.Bundle
 import android.view.*
@@ -6,7 +6,7 @@ import android.widget.LinearLayout
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.navArgs
 import com.hankkin.jetpack_note.R
-import com.hankkin.jetpack_note.component.CoolIndicatorLayout
+import com.hankkin.jetpack_note.widget.CoolIndicatorLayout
 import com.hankkin.jetpack_note.databinding.FragmentWebBinding
 import com.hankkin.jetpack_note.ext.clipTxt
 import com.hankkin.jetpack_note.ext.snackBarShow

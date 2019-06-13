@@ -7,7 +7,7 @@
 
 
     <fragment android:id="@+id/homeSampleFragment"
-              android:name="com.hankkin.jetpack_note.ui.navigation.SampleHomeFragment"
+              android:name="com.hankkin.jetpack_note.ui.navigation.fg.SampleHomeFragment"
               android:label="@string/title_home"
               tools:layout="@layout/fragment_sample_home">
 
@@ -28,7 +28,7 @@
 
 
     <fragment android:id="@+id/dashBoardSampleFragment"
-              android:name="com.hankkin.jetpack_note.ui.navigation.SampleDashboardFragment"
+              android:name="com.hankkin.jetpack_note.ui.navigation.fg.SampleDashboardFragment"
               android:label="@string/title_dashboard"
               tools:layout="@layout/fragment_sample_dashboard">
 
@@ -38,7 +38,7 @@
 
 
     <fragment android:id="@+id/argsSampleFragment"
-              android:name="com.hankkin.jetpack_note.ui.navigation.SampleArgsFragment"
+              android:name="com.hankkin.jetpack_note.ui.navigation.fg.SampleArgsFragment"
               android:label="@string/title_dashboard"
               tools:layout="@layout/fragment_sample_args">
 
@@ -59,7 +59,7 @@
     </fragment>
 
     <fragment android:id="@+id/notificationSampleFragment"
-              android:name="com.hankkin.jetpack_note.ui.navigation.SampleNotificationFragment"
+              android:name="com.hankkin.jetpack_note.ui.navigation.fg.SampleNotificationFragment"
               android:label="@string/title_notifications"
               tools:layout="@layout/fragment_sample_notification">
 

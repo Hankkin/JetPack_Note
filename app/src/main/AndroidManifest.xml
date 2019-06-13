@@ -17,16 +17,16 @@
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
         <activity
-                android:name=".ui.navigation.BottomNavSampleActivity"
+                android:name=".ui.navigation.activity.BottomNavSampleActivity"
                 android:label="@string/title_activity_bottom_nav_sample">
         </activity>
         <activity
-                android:name=".ui.navigation.NavSampleActivity"
+                android:name=".ui.navigation.activity.NavSampleActivity"
                 android:label="@string/title_activity_nav_sample"
                 android:theme="@style/AppTheme.NoActionBar">
         </activity>
         <activity
-                android:name=".MainActivity"
+                android:name=".ui.MainActivity"
                 android:label="@string/app_name"
                 android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>

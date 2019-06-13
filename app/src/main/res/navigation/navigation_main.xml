@@ -23,7 +23,7 @@
               android:label="@string/menu_code"/>
 
     <fragment android:id="@+id/navigationFragment"
-              android:name="com.hankkin.jetpack_note.ui.NavigationFragment"
+              android:name="com.hankkin.jetpack_note.ui.navigation.NavigationFragment"
               android:label="@string/menu_navigation">
         <action
                 android:id="@+id/action_navigationFragment_to_navSampleActivity"
@@ -42,7 +42,7 @@
     </fragment>
 
     <fragment android:id="@+id/webFragment"
-              android:name="com.hankkin.jetpack_note.ui.WebFragment"
+              android:name="com.hankkin.jetpack_note.ui.other.WebFragment"
               android:label=""
               tools:layout="@layout/fragment_web">
         <argument
@@ -51,17 +51,23 @@
         <argument android:name="title"
                   app:argType="string"/>
     </fragment>
+
     <activity android:id="@+id/navSampleActivity"
-              android:name="com.hankkin.jetpack_note.ui.navigation.NavSampleActivity"
+              android:name="com.hankkin.jetpack_note.ui.navigation.activity.NavSampleActivity"
               android:label="NavSampleActivity"
               tools:layout="@layout/activity_nav_sample"/>
 
     <activity android:id="@+id/bottomNavSampleActivity"
-              android:name="com.hankkin.jetpack_note.ui.navigation.BottomNavSampleActivity"
+              android:name="com.hankkin.jetpack_note.ui.navigation.activity.BottomNavSampleActivity"
               android:label="NavSampleActivity"
               tools:layout="@layout/activity_nav_sample"/>
 
     <fragment android:id="@+id/lifecyclesFragment"
               android:name="com.hankkin.jetpack_note.ui.lifecycles.LifecyclesFragment"
               android:label="Lifecycles"/>
+
+    <fragment android:id="@+id/liveDataFragment"
+              android:name="com.hankkin.jetpack_note.ui.livedata.LiveDataFragment"
+              android:label="LiveData"
+              tools:layout="@layout/fragment_live_data"/>
 </navigation>

@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-package com.hankkin.jetpack_note.component;
+package com.hankkin.jetpack_note.widget;
 
 import android.app.Activity;
 import android.content.Context;

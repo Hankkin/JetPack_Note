@@ -11,7 +11,7 @@
                 type="com.hankkin.jetpack_note.data.Component"/>
     </data>
 
-    <androidx.cardview.widget.CardView
+    <com.google.android.material.card.MaterialCardView
             android:clickable="true"
             android:focusable="true"
             app:cardElevation="2dp"
@@ -24,8 +24,12 @@
             >
 
         <LinearLayout
+                android:gravity="center_vertical"
                 android:background="?attr/selectableItemBackground"
-                android:padding="@dimen/dp10"
+                android:paddingLeft="@dimen/dp10"
+                android:paddingRight="@dimen/dp10"
+                android:paddingTop="@dimen/dp10"
+                android:paddingBottom="@dimen/dp20"
                 android:orientation="vertical"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
@@ -44,5 +48,5 @@
                     android:layout_height="wrap_content"/>
         </LinearLayout>
 
-    </androidx.cardview.widget.CardView>
+    </com.google.android.material.card.MaterialCardView>
 </layout>

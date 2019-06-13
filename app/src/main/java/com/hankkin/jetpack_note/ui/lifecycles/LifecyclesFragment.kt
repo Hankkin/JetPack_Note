@@ -52,6 +52,10 @@ class LifecyclesFragment : Fragment() {
         }
 
         btn_location.setOnClickListener {
+            if (mGpsListener != null) {
+                snackBarShow(ll_life_root,getString(R.string.has_location_hint))
+                return@setOnClickListener
+            }
             mGpsListener = MyLocationListener()
             requestPermission()
         }

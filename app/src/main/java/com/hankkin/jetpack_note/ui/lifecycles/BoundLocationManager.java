@@ -50,7 +50,7 @@ public class BoundLocationManager {
         void addLocationListener() {
             mLocationManager = (LocationManager) mContext.getSystemService(Context.LOCATION_SERVICE);
             mLocationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 0, 0, mListener);
-            FloatWindowUtils.INSTANCE.addViewContent("ON_RESUME--开启定位监听");
+            FloatWindowUtils.INSTANCE.addViewContent("Lifecycles-ON_RESUME--开启定位监听");
             Location lastLocation = mLocationManager.getLastKnownLocation(
                     LocationManager.GPS_PROVIDER);
             if (lastLocation != null) {
@@ -66,7 +66,7 @@ public class BoundLocationManager {
             }
             mLocationManager.removeUpdates(mListener);
             mLocationManager = null;
-            FloatWindowUtils.INSTANCE.addViewContent("ON_PAUSE--停止定位监听");
+            FloatWindowUtils.INSTANCE.addViewContent("Lifecycles-ON_PAUSE--停止定位监听");
         }
     }
 }

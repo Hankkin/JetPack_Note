@@ -1,4 +1,4 @@
-package com.hankkin.jetpack_note.ui
+package com.hankkin.jetpack_note.ui.navigation
 
 import android.os.Bundle
 import android.view.LayoutInflater

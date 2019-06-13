@@ -5,7 +5,7 @@
                                               android:layout_height="match_parent"
                                               android:background="@color/white"
                                               android:orientation="vertical"
-                                              tools:context=".ui.navigation.SampleNotificationFragment">
+                                              tools:context=".ui.navigation.fg.SampleNotificationFragment">
 
     <androidx.appcompat.widget.AppCompatImageView
             android:src="@mipmap/bg_notification"

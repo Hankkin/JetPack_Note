@@ -2,14 +2,11 @@ package com.hankkin.jetpack_note.utils
 
 import android.app.Application
 import android.util.Log
-import android.view.LayoutInflater
 import android.view.animation.BounceInterpolator
-import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.appcompat.widget.AppCompatButton
-import com.google.android.material.button.MaterialButton
-import com.hankkin.jetpack_note.MainActivity
+import com.hankkin.jetpack_note.ui.MainActivity
 import com.hankkin.jetpack_note.R
 import com.yhao.floatwindow.*
 
@@ -30,7 +27,7 @@ object FloatWindowUtils {
             .setHeight(Screen.height, 0.3f)
             .setX(Screen.width, 0.3f)
             .setY(Screen.height, 0.45f)
-            .setMoveType(MoveType.slide, 100, 0)
+            .setMoveType(MoveType.slide, 0, 0)
             .setMoveStyle(500, BounceInterpolator())
             .setDesktopShow(true)
             .setFilter(true, MainActivity::class.java)
@@ -43,6 +40,11 @@ object FloatWindowUtils {
         view.findViewById<AppCompatButton>(R.id.btn_float_clear).setOnClickListener {
             ll.removeAllViews()
         }
+    }
+
+
+    fun isShow(): Boolean {
+        return FloatWindow.get().isShowing
     }
 
     fun show() {
@@ -70,6 +72,13 @@ object FloatWindowUtils {
         val tv = TextView(view.context)
         tv.text = msg
         ll.addView(tv)
+    }
+
+    fun clear() {
+        if (FloatWindow.get() == null) return
+        val view = FloatWindow.get().view
+        val ll = view.findViewById<LinearLayout>(R.id.ll_flow_content)
+        ll.removeAllViews()
     }
 
     private val mPermissionListener = object : PermissionListener {

@@ -1,4 +1,4 @@
-package com.hankkin.jetpack_note
+package com.hankkin.jetpack_note.ui
 
 import android.os.Bundle
 import android.view.Menu
@@ -13,9 +13,9 @@ import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
+import com.hankkin.jetpack_note.R
 import com.hankkin.jetpack_note.databinding.ActivityMainBinding
 import com.hankkin.jetpack_note.utils.StatusBarUtil
-import com.yhao.floatwindow.FloatWindow
 
 class MainActivity : AppCompatActivity() {
 
@@ -33,7 +33,10 @@ class MainActivity : AppCompatActivity() {
         mDataBinding.toolbar.setTitleTextColor(resources.getColor(R.color.black))
 
         navController = Navigation.findNavController(this, R.id.fragment_home)
-        appBarConfiguration = AppBarConfiguration(setOf(R.id.homeFragment, R.id.codeFragment), drawerLayout)
+        appBarConfiguration = AppBarConfiguration(setOf(
+            R.id.homeFragment,
+            R.id.codeFragment
+        ), drawerLayout)
         // Set up ActionBar
         setSupportActionBar(mDataBinding.toolbar)
         setupActionBarWithNavController(navController, appBarConfiguration)

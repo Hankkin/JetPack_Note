@@ -23,7 +23,7 @@
  * SOFTWARE.
  */
 
-package com.hankkin.jetpack_note.component;
+package com.hankkin.jetpack_note.widget;
 
 import android.content.res.Resources;
 import android.graphics.*;

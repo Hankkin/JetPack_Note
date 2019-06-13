@@ -28,7 +28,7 @@
                         android:icon="@drawable/ic_menu_nav"
                         android:title="@string/menu_navigation"/>
                 <item
-                        android:id="@+id/nav_live_data"
+                        android:id="@+id/liveDataFragment"
                         android:icon="@drawable/ic_menu_code"
                         android:title="@string/menu_live_data"/>
 

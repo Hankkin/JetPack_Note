@@ -1,4 +1,4 @@
-package com.hankkin.jetpack_note.ui.navigation
+package com.hankkin.jetpack_note.ui.navigation.fg
 
 
 import android.app.NotificationChannel
@@ -12,7 +12,6 @@ import android.view.ViewGroup
 import androidx.core.app.NotificationCompat
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
-import com.google.android.material.snackbar.Snackbar
 import com.hankkin.jetpack_note.R
 import com.hankkin.jetpack_note.ext.snackBarShow
 import kotlinx.android.synthetic.main.fragment_sample_notification.*

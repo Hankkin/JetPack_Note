@@ -1,4 +1,4 @@
-package com.hankkin.jetpack_note.ui.navigation
+package com.hankkin.jetpack_note.ui.navigation.activity
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity

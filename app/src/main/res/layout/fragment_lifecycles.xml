@@ -110,11 +110,11 @@
 
             </LinearLayout>
 
-            <androidx.cardview.widget.CardView
+            <com.google.android.material.card.MaterialCardView
                     android:layout_margin="@dimen/dp10"
                     android:id="@+id/cv_life_code"
-                    app:cardElevation="@dimen/dp4"
-                    app:cardCornerRadius="@dimen/dp4"
+                    app:cardElevation="@dimen/dp2"
+                    app:cardCornerRadius="@dimen/dp2"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
@@ -132,7 +132,7 @@
                 </LinearLayout>
 
 
-            </androidx.cardview.widget.CardView>
+            </com.google.android.material.card.MaterialCardView>
 
         </LinearLayout>
 

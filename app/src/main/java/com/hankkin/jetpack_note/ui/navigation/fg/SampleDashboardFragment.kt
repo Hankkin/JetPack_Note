@@ -1,4 +1,4 @@
-package com.hankkin.jetpack_note.ui.navigation
+package com.hankkin.jetpack_note.ui.navigation.fg
 
 
 import android.os.Bundle
