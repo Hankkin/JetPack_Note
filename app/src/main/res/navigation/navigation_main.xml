@@ -70,4 +70,9 @@
               android:name="com.hankkin.jetpack_note.ui.livedata.LiveDataFragment"
               android:label="LiveData"
               tools:layout="@layout/fragment_live_data"/>
+
+    <fragment android:id="@+id/moreSampleFragment"
+              android:name="com.hankkin.jetpack_note.ui.MoreSampleFragment"
+              android:label="fragment_more_sample"
+              tools:layout="@layout/fragment_more_sample"/>
 </navigation>

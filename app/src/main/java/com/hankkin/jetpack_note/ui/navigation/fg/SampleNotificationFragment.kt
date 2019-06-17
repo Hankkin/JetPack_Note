@@ -65,7 +65,7 @@ class SampleNotificationFragment : Fragment() {
                 .setAutoCancel(true)
             notificationManager.notify(0, builder.build())
 
-            requireActivity().snackBarShow(view,getString(R.string.deeplink_hint))
+            requireActivity().snackBarShow(activity?.findViewById(R.id.fragment_home_sample),getString(R.string.deeplink_hint))
         }
     }
 

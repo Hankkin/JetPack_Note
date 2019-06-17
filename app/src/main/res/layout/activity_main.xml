@@ -11,6 +11,7 @@
             android:fitsSystemWindows="true"
             tools:openDrawer="start">
         <LinearLayout
+                android:id="@+id/ll_root_container"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical">
@@ -39,7 +40,7 @@
         </LinearLayout>
 
         <com.google.android.material.navigation.NavigationView
-                app:itemIconTint="@color/nav_item_txt"
+                app:itemIconTint="@color/nav_item_icon"
                 app:itemTextColor="@color/nav_item_txt"
                 android:id="@+id/nav_view"
                 android:layout_width="wrap_content"

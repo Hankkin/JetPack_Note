@@ -13,50 +13,25 @@
                 android:icon="@drawable/ic_menu_code"
                 android:title="@string/menu_code"/>
 
-    </group>
-    <group android:checkableBehavior="single">
-        <item android:title="@string/demo">
-            <menu>
+        <item
+                android:id="@+id/navigationFragment"
+                android:icon="@drawable/ic_menu_nav"
+                android:title="@string/menu_navigation"/>
 
-                <item
-                        android:id="@+id/lifecyclesFragment"
-                        android:icon="@drawable/ic_menu_lifecycle"
-                        android:title="@string/menu_lifecycle"/>
+        <item
+                android:id="@+id/lifecyclesFragment"
+                android:icon="@drawable/ic_menu_lifecycle"
+                android:title="@string/menu_lifecycle"/>
 
-                <item
-                        android:id="@+id/navigationFragment"
-                        android:icon="@drawable/ic_menu_nav"
-                        android:title="@string/menu_navigation"/>
-                <item
-                        android:id="@+id/liveDataFragment"
-                        android:icon="@drawable/ic_menu_code"
-                        android:title="@string/menu_live_data"/>
 
-                <item
-                        android:id="@+id/nav_view_model"
-                        android:icon="@drawable/ic_menu_view"
-                        android:title="@string/menu_view_model"/>
-
-                <item
-                        android:id="@+id/nav_paging"
-                        android:icon="@drawable/ic_menu_share"
-                        android:title="@string/menu_paging"/>
-
-                <item
-                        android:id="@+id/nav_room"
-                        android:icon="@drawable/ic_menu_share"
-                        android:title="@string/menu_room"/>
-                <item
-                        android:id="@+id/nav_work_manager"
-                        android:icon="@drawable/ic_menu_send"
-                        android:title="@string/menu_work_manager"/>
-            </menu>
-        </item>
+        <item
+                android:id="@+id/moreSampleFragment"
+                android:icon="@drawable/ic_menu_nav"
+                android:title="@string/menu_more"/>
 
     </group>
 
-    <item android:title="@string/other">
-        <menu>
+        <group android:id="@+id/group_other">
             <item
                     android:id="@+id/nav_setting"
                     android:icon="@drawable/ic_menu_setting"
@@ -65,7 +40,6 @@
                     android:id="@+id/nav_about"
                     android:icon="@drawable/ic_menu_about"
                     android:title="@string/menu_about"/>
-        </menu>
-    </item>
+        </group>
 
 </menu>

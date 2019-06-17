@@ -10,27 +10,13 @@
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
-        <com.google.android.material.card.MaterialCardView
-                app:cardElevation="@dimen/dp2"
-                app:cardCornerRadius="@dimen/dp2"
-                android:layout_margin="@dimen/dp10"
-                android:layout_width="match_parent"
-                android:layout_height="200dp">
-
-            <ImageView
-                    android:layout_marginTop="@dimen/dp10"
-                    android:scaleType="fitXY"
-                    android:src="@mipmap/jetpack_donut"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"/>
-        </com.google.android.material.card.MaterialCardView>
 
         <androidx.recyclerview.widget.RecyclerView
                 android:layout_marginTop="@dimen/dp10"
                 android:id="@+id/rv_home"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
                 app:spanCount="2"
                 tools:listitem="@layout/list_item_home"/>
     </LinearLayout>

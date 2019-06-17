@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
+import com.hankkin.jetpack_note.R
 import com.hankkin.jetpack_note.adapter.HomeListAdapter
 import com.hankkin.jetpack_note.databinding.FragmentHomeBinding
 import com.hankkin.jetpack_note.utils.InjectorUtils
