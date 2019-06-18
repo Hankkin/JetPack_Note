@@ -5,7 +5,8 @@
         xmlns:tools="http://schemas.android.com/tools">
 
 
-    <LinearLayout
+
+    <FrameLayout
             android:background="@android:color/white"
             android:orientation="vertical"
             android:layout_width="match_parent"
@@ -17,7 +18,18 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-                app:spanCount="2"
                 tools:listitem="@layout/list_item_home"/>
-    </LinearLayout>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:outlineSpotShadowColor="@color/theme"
+                android:shadowColor="@color/theme"
+                android:backgroundTint="@color/theme"
+                android:id="@+id/fab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|end"
+                android:layout_margin="@dimen/fab_margin"
+                app:srcCompat="@mipmap/icon_grid"
+                />
+    </FrameLayout>
 </layout>

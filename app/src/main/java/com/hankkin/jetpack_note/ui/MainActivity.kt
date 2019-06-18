@@ -18,7 +18,6 @@ import com.hankkin.jetpack_note.R
 import com.hankkin.jetpack_note.databinding.ActivityMainBinding
 import com.hankkin.jetpack_note.utils.StatusBarUtil
 import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.android.synthetic.main.activity_nav_sample.*
 import kotlinx.android.synthetic.main.activity_nav_sample.drawer_layout
 
 class MainActivity : AppCompatActivity() {
@@ -41,20 +40,11 @@ class MainActivity : AppCompatActivity() {
             R.id.homeFragment,
             R.id.codeFragment,
             R.id.navigationFragment,
-            R.id.lifecyclesFragment,
-            R.id.moreSampleFragment
+            R.id.lifecyclesFragment
         ), drawerLayout)
-        // Set up ActionBar
         setSupportActionBar(mDataBinding.toolbar)
         setupActionBarWithNavController(navController, appBarConfiguration)
-        // Set up navigation menu
         mDataBinding.navView.setupWithNavController(navController)
-
-        val toggle = ActionBarDrawerToggle(
-            this, drawer_layout, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close
-        )
-        drawer_layout.addDrawerListener(toggle)
-        toggle.syncState()
     }
 
     override fun onBackPressed() {

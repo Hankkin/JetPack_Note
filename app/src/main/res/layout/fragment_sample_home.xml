@@ -13,52 +13,48 @@
             android:layout_height="300dp"/>
 
 
-    <androidx.appcompat.widget.AppCompatButton
+    <com.google.android.material.button.MaterialButton
             android:layout_margin="@dimen/dp20"
             android:id="@+id/btn_nav_sample_jump"
             android:gravity="center"
-            style="@style/normalTxt"
-            android:background="@drawable/btn_theme"
+            android:backgroundTint="@color/theme"
             android:text="@string/navigation_sample_jump"
             android:layout_width="match_parent"
-            android:layout_height="40dp"
+            android:layout_height="wrap_content"
     />
-    <androidx.appcompat.widget.AppCompatButton
+    <com.google.android.material.button.MaterialButton
             android:layout_marginLeft="@dimen/dp20"
             android:layout_marginRight="@dimen/dp20"
             android:id="@+id/btn_nav_sample_jump_action"
             android:gravity="center"
-            style="@style/normalTxt"
-            android:background="@drawable/btn_theme"
+            android:backgroundTint="@color/theme"
             android:text="@string/navigation_sample_jump_action"
             android:layout_width="match_parent"
-            android:layout_height="40dp"
+            android:layout_height="wrap_content"
     />
 
-    <androidx.appcompat.widget.AppCompatButton
+    <com.google.android.material.button.MaterialButton
             android:layout_marginTop="@dimen/dp20"
             android:layout_marginLeft="@dimen/dp20"
             android:layout_marginRight="@dimen/dp20"
             android:id="@+id/btn_nav_sample_jump_argument_normal"
             android:gravity="center"
-            style="@style/normalTxt"
-            android:background="@drawable/btn_theme"
+            android:backgroundTint="@color/theme"
             android:text="@string/navigation_sample_jump_arguments_normal"
             android:layout_width="match_parent"
-            android:layout_height="40dp"
+            android:layout_height="wrap_content"
     />
 
-    <androidx.appcompat.widget.AppCompatButton
+    <com.google.android.material.button.MaterialButton
             android:layout_marginTop="@dimen/dp20"
             android:layout_marginLeft="@dimen/dp20"
             android:layout_marginRight="@dimen/dp20"
             android:id="@+id/btn_nav_sample_jump_argument_bean"
             android:gravity="center"
-            style="@style/normalTxt"
-            android:background="@drawable/btn_theme"
+            android:backgroundTint="@color/theme"
             android:text="@string/navigation_sample_jump_arguments_bean"
             android:layout_width="match_parent"
-            android:layout_height="40dp"
+            android:layout_height="wrap_content"
     />
 
 </androidx.appcompat.widget.LinearLayoutCompat>

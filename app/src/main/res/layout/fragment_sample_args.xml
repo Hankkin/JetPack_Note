@@ -24,15 +24,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
 
-    <androidx.appcompat.widget.AppCompatButton
+    <com.google.android.material.button.MaterialButton
+            android:backgroundTint="@color/theme"
             android:layout_margin="@dimen/dp20"
             android:id="@+id/btn_nav_args_jump"
             android:gravity="center"
-            style="@style/normalTxt"
-            android:background="@drawable/btn_theme"
             android:text="@string/navigation_sample_jump_go_home"
             android:layout_width="match_parent"
-            android:layout_height="40dp"
+            android:layout_height="wrap_content"
     />
 
 </androidx.appcompat.widget.LinearLayoutCompat>

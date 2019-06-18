@@ -26,7 +26,7 @@
 
         <item
                 android:id="@+id/moreSampleFragment"
-                android:icon="@drawable/ic_menu_nav"
+                android:icon="@drawable/ic_menu_more"
                 android:title="@string/menu_more"/>
 
     </group>

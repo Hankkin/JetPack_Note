@@ -166,4 +166,8 @@
         "}
     </string>
     <string name="start_oberver">开始观察数据</string>
+    <string name="viewmodel_fragment_demo">查看Fragment共享Demo</string>
+    <string name="demo_activity_fragment_fragment_seekbar_viewmodel_fragment_seekbar_hint">
+        本Demo展示了一个Activity中存在两个Fragment，并且两个Fragment中需要同时使用SeekBar的数据。通过ViewModel实现两个Fragment中的SeekBar的值保持统一
+    </string>
 </resources>

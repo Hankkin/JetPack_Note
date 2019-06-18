@@ -45,6 +45,7 @@ dependencies {
     implementation "com.just.agentweb:agentweb:$rootProject.agentWebVersion"
     implementation "androidx.navigation:navigation-fragment-ktx:$rootProject.navigationVersion"
     implementation "androidx.navigation:navigation-ui-ktx:$rootProject.navigationVersion"
+    implementation "androidx.viewpager2:viewpager2:$rootProject.viewPager2Version"
 
 
     implementation "thereisnospon.codeview:codeview:0.3.1"

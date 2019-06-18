@@ -22,7 +22,6 @@
             android:layout_height="wrap_content"/>
 
     <androidx.appcompat.widget.AppCompatEditText
-
             android:id="@+id/et_deep_link"
             android:hint="@string/navigation_sample_deep_link_hint"
             android:layout_marginLeft="@dimen/dp20"
@@ -30,24 +29,22 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
 
-    <androidx.appcompat.widget.AppCompatButton
+    <com.google.android.material.button.MaterialButton
             android:layout_margin="@dimen/dp20"
             android:id="@+id/btn_nav_deep_link"
             android:gravity="center"
-            style="@style/normalTxt"
-            android:background="@drawable/btn_theme"
+            android:backgroundTint="@color/theme"
             android:text="@string/navigation_sample_deep_link"
             android:layout_width="match_parent"
-            android:layout_height="40dp"/>
+            android:layout_height="wrap_content"/>
 
-    <androidx.appcompat.widget.AppCompatButton
+    <com.google.android.material.button.MaterialButton
+            android:backgroundTint="@color/theme"
             android:layout_margin="@dimen/dp20"
             android:id="@+id/btn_nav_dashboard_jump_home"
             android:gravity="center"
-            style="@style/normalTxt"
-            android:background="@drawable/btn_theme"
             android:text="@string/navigation_sample_jump_go_home"
             android:layout_width="match_parent"
-            android:layout_height="40dp"/>
+            android:layout_height="wrap_content"/>
 
 </androidx.appcompat.widget.LinearLayoutCompat>

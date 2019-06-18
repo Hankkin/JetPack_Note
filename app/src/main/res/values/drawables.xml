@@ -1,11 +1,9 @@
 <resources xmlns:android="http://schemas.android.com/apk/res/android">
-    <item name="ic_menu_home" type="drawable">@drawable/menu_home</item>
-    <item name="ic_menu_nav" type="drawable">@drawable/menu_nav</item>
-    <item name="ic_menu_code" type="drawable">@drawable/menu_code</item>
-    <item name="ic_menu_lifecycle" type="drawable">@drawable/menu_circle</item>
-    <item name="ic_menu_view" type="drawable">@android:drawable/ic_menu_more</item>
-    <item name="ic_menu_paging" type="drawable">@android:drawable/ic_menu_rotate</item>
-    <item name="ic_menu_send" type="drawable">@android:drawable/ic_menu_send</item>
-    <item name="ic_menu_setting" type="drawable">@drawable/menu_setting</item>
-    <item name="ic_menu_about" type="drawable">@drawable/menu_about</item>
+    <item name="ic_menu_home" type="drawable">@mipmap/menu_home</item>
+    <item name="ic_menu_nav" type="drawable">@mipmap/menu_nav</item>
+    <item name="ic_menu_code" type="drawable">@mipmap/menu_know</item>
+    <item name="ic_menu_lifecycle" type="drawable">@mipmap/menu_circle</item>
+    <item name="ic_menu_more" type="drawable">@mipmap/menu_more</item>
+    <item name="ic_menu_setting" type="drawable">@mipmap/menu_set</item>
+    <item name="ic_menu_about" type="drawable">@mipmap/menu_about</item>
 </resources>

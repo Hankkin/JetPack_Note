@@ -73,6 +73,14 @@
 
     <fragment android:id="@+id/moreSampleFragment"
               android:name="com.hankkin.jetpack_note.ui.MoreSampleFragment"
-              android:label="fragment_more_sample"
-              tools:layout="@layout/fragment_more_sample"/>
+              android:label="@string/menu_more"
+              tools:layout="@layout/fragment_more_sample">
+        <action android:id="@+id/action_moreSampleFragment_to_viewModelShareActivity"
+                app:destination="@id/viewModelShareActivity"/>
+    </fragment>
+
+    <activity android:id="@+id/viewModelShareActivity"
+              android:name="com.hankkin.jetpack_note.ui.viewmodel.ViewModelShareActivity"
+              android:label="activity_view_model_share"
+              tools:layout="@layout/activity_view_model_share"/>
 </navigation>

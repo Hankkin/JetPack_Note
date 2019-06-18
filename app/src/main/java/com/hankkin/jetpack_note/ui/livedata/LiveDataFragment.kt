@@ -44,8 +44,6 @@ class LiveDataFragment : Fragment() {
                 FloatWindowUtils.addViewContent("LiveData-onChanged: $lifeStatus")
             }
             liveData.observeForever(statusObserver)
-            btn_observer_data.isEnabled = false
-            btn_observer_data.setTextColor(resources.getColor(R.color.subTitleTxt))
         }
         code_view_livedata.setTheme(CodeViewTheme.ARDUINO_LIGHT).fillColor()
         code_view_livedata.showCode(resources.getString(R.string.livedata_code))

@@ -19,6 +19,7 @@ buildscript {
         workVersion = '2.1.0-alpha02'
         gsonVersion = '2.8.2'
         fragmentVersion = '1.1.0-alpha09'
+        viewPager2Version = '1.0.0-alpha05'
         agentWebVersion = '4.0.2'
 
         supportLibraryVersion = '1.1.0-alpha05'
@@ -34,7 +35,7 @@ buildscript {
         jcenter()
     }
     dependencies {
-        classpath "com.android.tools.build:gradle:$gradleVersion"
+        classpath "com.android.tools.build:gradle:${gradleVersion}"
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlinVersion"
         classpath "androidx.navigation:navigation-safe-args-gradle-plugin:$navigationVersion"
     }

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:fitsSystemWindows="true"
+        tools:context=".ui.viewmodel.ViewModelShareActivity">
+
+    <androidx.appcompat.widget.Toolbar
+            app:title="Fragment共享数据"
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            android:theme="@style/AppTheme.PopupOverlay"
+    />
+
+    <com.google.android.material.card.MaterialCardView
+            app:cardElevation="@dimen/dp2"
+            app:cardCornerRadius="@dimen/dp2"
+            android:layout_margin="@dimen/dp10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+        <LinearLayout
+                android:padding="@dimen/dp10"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            <androidx.appcompat.widget.AppCompatTextView
+                    android:textStyle="bold"
+                    android:text="@string/recommend"
+                    style="@style/normalTxt"
+                    android:layout_marginTop="@dimen/dp10"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                    android:lineSpacingExtra="@dimen/dp2"
+                    style="@style/normalTxt"
+                    android:layout_marginTop="@dimen/dp10"
+                    android:text="@string/demo_activity_fragment_fragment_seekbar_viewmodel_fragment_seekbar_hint"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <fragment
+            android:id="@+id/fragment1"
+            android:name="com.hankkin.jetpack_note.ui.viewmodel.DataShareFragment"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"/>
+
+    <fragment
+            android:id="@+id/fragment2"
+            android:name="com.hankkin.jetpack_note.ui.viewmodel.DataShareFragment"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"/>
+
+</LinearLayout>

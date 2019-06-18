@@ -8,6 +8,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.ViewModelProviders
+import androidx.navigation.fragment.findNavController
 
 import com.hankkin.jetpack_note.R
 import kotlinx.android.synthetic.main.fragment_view_model.*
@@ -28,12 +29,16 @@ class ViewModelFragment : Fragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
 
-//        val vm = ViewModelProviders.of(this).get(DemoViewModel::class.java)
-//        if (vm.time == null) {
-//            vm.time = SystemClock.elapsedRealtime()
-//        }
-//        chronometer.base = vm.time!!
-//        chronometer.start()
+        val vm = ViewModelProviders.of(this).get(DemoViewModel::class.java)
+        if (vm.time == null) {
+            vm.time = SystemClock.elapsedRealtime()
+        }
+        chronometer.base = vm.time!!
+        chronometer.start()
+
+        btn_fragment_share.setOnClickListener {
+            findNavController().navigate(R.id.viewModelShareActivity)
+        }
     }
 
 }
