@@ -11,6 +11,7 @@ import androidx.drawerlayout.widget.DrawerLayout
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.navigation.NavigationView
 import com.hankkin.jetpack_note.R
+import com.hankkin.jetpack_note.ui.MoreSampleFragment
 import com.hankkin.jetpack_note.utils.StatusBarUtil
 import kotlinx.android.synthetic.main.activity_nav_sample.*
 
@@ -65,9 +66,12 @@ class NavSampleActivity : AppCompatActivity(), NavigationView.OnNavigationItemSe
         when (item.itemId) {
             R.id.nav_home -> {
                 // Handle the camera action
+
             }
             R.id.nav_gallery -> {
-
+                val transaction = supportFragmentManager.beginTransaction()
+                transaction.add(R.id.container, MoreSampleFragment())
+                transaction.commit()
             }
             R.id.nav_slideshow -> {
 

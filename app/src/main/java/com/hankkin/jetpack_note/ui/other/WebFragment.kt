@@ -31,8 +31,12 @@ class WebFragment : Fragment() {
         setHasOptionsMenu(true)
         binding = FragmentWebBinding.inflate(inflater, container, false)
         requireActivity().toolbar.title = args.title
-        initWeb()
         return binding.root
+    }
+
+    override fun onActivityCreated(savedInstanceState: Bundle?) {
+        super.onActivityCreated(savedInstanceState)
+        initWeb()
     }
 
     private fun initWeb() {

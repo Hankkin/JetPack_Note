@@ -11,6 +11,7 @@ import androidx.lifecycle.ViewModelProviders
 import androidx.navigation.fragment.findNavController
 
 import com.hankkin.jetpack_note.R
+import com.hankkin.jetpack_note.base.BaseFragment
 import kotlinx.android.synthetic.main.fragment_view_model.*
 
 /**
@@ -29,6 +30,11 @@ class ViewModelFragment : Fragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
 
+
+    }
+
+    override fun onStart() {
+        super.onStart()
         val vm = ViewModelProviders.of(this).get(DemoViewModel::class.java)
         if (vm.time == null) {
             vm.time = SystemClock.elapsedRealtime()

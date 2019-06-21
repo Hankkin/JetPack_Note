@@ -40,4 +40,6 @@ class BottomNavSampleActivity : AppCompatActivity() {
         }
     }
 
+
+
 }

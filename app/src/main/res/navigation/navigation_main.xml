@@ -16,6 +16,14 @@
                 app:exitAnim="@anim/slide_out_left"
                 app:popEnterAnim="@anim/slide_in_left"
                 app:popExitAnim="@anim/slide_out_right"/>
+
+        <action
+                android:id="@+id/action_homeFragment_to_moreSampleActivity"
+                app:destination="@id/moreSampleActivity"
+                app:enterAnim="@anim/slide_in_right"
+                app:exitAnim="@anim/slide_out_left"
+                app:popEnterAnim="@anim/slide_in_left"
+                app:popExitAnim="@anim/slide_out_right"/>
     </fragment>
 
     <fragment android:id="@+id/codeFragment"
@@ -75,12 +83,15 @@
               android:name="com.hankkin.jetpack_note.ui.MoreSampleFragment"
               android:label="@string/menu_more"
               tools:layout="@layout/fragment_more_sample">
-        <action android:id="@+id/action_moreSampleFragment_to_viewModelShareActivity"
-                app:destination="@id/viewModelShareActivity"/>
+
     </fragment>
 
     <activity android:id="@+id/viewModelShareActivity"
               android:name="com.hankkin.jetpack_note.ui.viewmodel.ViewModelShareActivity"
               android:label="activity_view_model_share"
               tools:layout="@layout/activity_view_model_share"/>
+    <activity android:id="@+id/moreSampleActivity"
+              android:name="com.hankkin.jetpack_note.ui.MoreSampleActivity"
+              android:label="activity_more_sample"
+              tools:layout="@layout/activity_more_sample"/>
 </navigation>

@@ -22,6 +22,10 @@
 
     </com.google.android.material.appbar.AppBarLayout>
 
+    <FrameLayout
+            android:id="@+id/container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"></FrameLayout>
     <include layout="@layout/content_nav_sample"/>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton

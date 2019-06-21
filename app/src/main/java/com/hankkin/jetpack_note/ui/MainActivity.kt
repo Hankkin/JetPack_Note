@@ -40,7 +40,8 @@ class MainActivity : AppCompatActivity() {
             R.id.homeFragment,
             R.id.codeFragment,
             R.id.navigationFragment,
-            R.id.lifecyclesFragment
+            R.id.lifecyclesFragment,
+            R.id.moreSampleActivity
         ), drawerLayout)
         setSupportActionBar(mDataBinding.toolbar)
         setupActionBarWithNavController(navController, appBarConfiguration)
