@@ -17,4 +17,5 @@ class CodeFragment : Fragment() {
     ): View? {
         return FragmentCodeBinding.inflate(inflater, container, false).root
     }
+
 }

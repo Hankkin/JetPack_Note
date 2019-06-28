@@ -1,9 +1,11 @@
 package com.hankkin.jetpack_note.ui
 
+import android.Manifest
+import android.annotation.SuppressLint
+import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
-import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.GravityCompat
 import androidx.databinding.DataBindingUtil
@@ -16,9 +18,9 @@ import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.hankkin.jetpack_note.R
 import com.hankkin.jetpack_note.databinding.ActivityMainBinding
+import com.hankkin.jetpack_note.tf.DetectorActivity
 import com.hankkin.jetpack_note.utils.StatusBarUtil
-import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.android.synthetic.main.activity_nav_sample.drawer_layout
+import com.tbruyelle.rxpermissions2.RxPermissions
 
 class MainActivity : AppCompatActivity() {
 
@@ -36,13 +38,15 @@ class MainActivity : AppCompatActivity() {
         mDataBinding.toolbar.setTitleTextColor(resources.getColor(R.color.black))
 
         navController = Navigation.findNavController(this, R.id.fragment_home)
-        appBarConfiguration = AppBarConfiguration(setOf(
-            R.id.homeFragment,
-            R.id.codeFragment,
-            R.id.navigationFragment,
-            R.id.lifecyclesFragment,
-            R.id.moreSampleActivity
-        ), drawerLayout)
+        appBarConfiguration = AppBarConfiguration(
+            setOf(
+                R.id.homeFragment,
+                R.id.codeFragment,
+                R.id.navigationFragment,
+                R.id.lifecyclesFragment,
+                R.id.moreSampleActivity
+            ), drawerLayout
+        )
         setSupportActionBar(mDataBinding.toolbar)
         setupActionBarWithNavController(navController, appBarConfiguration)
         mDataBinding.navView.setupWithNavController(navController)
@@ -62,13 +66,34 @@ class MainActivity : AppCompatActivity() {
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        return when (item.itemId) {
-            R.id.action_settings -> true
+        when (item.itemId) {
+            R.id.action_settings -> {
+                requestPermission()
+            }
             else -> super.onOptionsItemSelected(item)
         }
+        return false
     }
 
     override fun onSupportNavigateUp(): Boolean {
         return navController.navigateUp(appBarConfiguration) || super.onSupportNavigateUp()
+    }
+
+    @SuppressLint("CheckResult")
+    private fun requestPermission() {
+        RxPermissions(this)
+            .requestEach(
+                Manifest.permission.WRITE_EXTERNAL_STORAGE,
+                Manifest.permission.READ_EXTERNAL_STORAGE
+            )
+            .subscribe { p0 ->
+                when {
+                    p0.granted -> {
+                        startActivity(Intent(this, DetectorActivity::class.java))
+                    }
+                    p0.shouldShowRequestPermissionRationale -> {
+                    }
+                }
+            }
     }
 }
