@@ -8,6 +8,7 @@
               tools:context=".ui.MoreSampleFragment">
 
 
+    <include layout="@layout/layout_loading"/>
     <com.google.android.material.tabs.TabLayout
             app:tabIndicatorColor="@color/theme"
             app:tabTextColor="@color/titleTxt"

@@ -1,21 +1,21 @@
 [
   {
     "id": "1",
-    "title": "Lifecycles",
-    "description": "管理您的 Activity 和 Fragment 生命周期",
-    "link": "https://hankkin.blog.csdn.net/article/details/91440191"
+    "title": "Navigation",
+    "description": "处理应用内导航所需的一切",
+    "link": "https://juejin.im/post/5d1202fc6fb9a07ef90ca7a1"
   },
   {
     "id": "2",
-    "title": "LiveData",
-    "description": "在底层数据库更改时通知视图",
-    "link": "https://juejin.im/post/5cf3df3651882552046db134"
+    "title": "Lifecycles",
+    "description": "管理您的 Activity 和 Fragment 生命周期",
+    "link": "https://juejin.im/post/5d15bbb86fb9a07f03574e56"
   },
   {
     "id": "3",
-    "title": "Navigation",
-    "description": "处理应用内导航所需的一切",
-    "link": "https://www.yuque.com/hankkin/jetpack/navigation_code"
+    "title": "LiveData",
+    "description": "在底层数据库更改时通知视图",
+    "link": "https://juejin.im/post/5cf3df3651882552046db134"
   },
   {
     "id": "4",

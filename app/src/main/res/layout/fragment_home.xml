@@ -17,7 +17,8 @@
                 android:id="@+id/rv_home"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:spanCount="2"
+                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
                 tools:listitem="@layout/list_item_home"/>
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -29,7 +30,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="bottom|end"
                 android:layout_margin="@dimen/fab_margin"
-                app:srcCompat="@mipmap/icon_grid"
+                app:srcCompat="@mipmap/icon_lin"
                 />
     </FrameLayout>
 </layout>

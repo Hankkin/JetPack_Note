@@ -10,6 +10,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.fragment.app.Fragment
 import com.hankkin.jetpack_note.R
 import com.hankkin.jetpack_note.base.BaseFragment
 import com.hankkin.jetpack_note.ext.snackBarShow
@@ -17,9 +18,10 @@ import com.hankkin.jetpack_note.utils.FloatWindowUtils
 import com.tbruyelle.rxpermissions2.RxPermissions
 import com.yhao.floatwindow.FloatWindow
 import kotlinx.android.synthetic.main.fragment_lifecycles.*
+import kotlinx.android.synthetic.main.layout_loading.*
 import thereisnospon.codeview.CodeViewTheme
 
-class LifecyclesFragment : BaseFragment() {
+class LifecyclesFragment : Fragment() {
 
     private var mGpsListener: MyLocationListener? = null
 
@@ -33,16 +35,10 @@ class LifecyclesFragment : BaseFragment() {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        showLoad()
-        Handler().postDelayed({
-            setUI()
-            dismissLoad()
-        }, 1000)
+        setUI()
     }
 
     private fun setUI() {
-        code_view.setTheme(CodeViewTheme.ARDUINO_LIGHT).fillColor()
-        code_view.showCode(resources.getString(R.string.lifecycle_codes))
 
         btn_add_obserber.setOnClickListener {
             if (FloatWindow.get() == null) {
@@ -58,10 +54,6 @@ class LifecyclesFragment : BaseFragment() {
             }
             mGpsListener = MyLocationListener()
             requestPermission()
-        }
-        btn_life_recommend.setOnClickListener {
-            ll_life_hint.visibility = View.VISIBLE
-            iv_life.visibility = View.GONE
         }
 
     }

@@ -6,6 +6,7 @@ import androidx.viewpager2.adapter.FragmentStateAdapter
 import com.hankkin.jetpack_note.R
 import com.hankkin.jetpack_note.ui.livedata.LiveDataFragment
 import com.hankkin.jetpack_note.ui.viewmodel.ViewModelFragment
+import com.hankkin.jetpack_note.utils.StatusBarUtil
 import com.hankkin.jetpack_note.widget.TabLayoutMediator
 import kotlinx.android.synthetic.main.activity_more_sample.*
 
@@ -26,6 +27,7 @@ class MoreSampleActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_more_sample)
+        StatusBarUtil.setLightMode(this)
 
         vp.adapter = object : FragmentStateAdapter(this) {
             override fun getItemCount() = mFgs.size

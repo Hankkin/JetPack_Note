@@ -18,7 +18,6 @@ import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.hankkin.jetpack_note.R
 import com.hankkin.jetpack_note.databinding.ActivityMainBinding
-import com.hankkin.jetpack_note.tf.DetectorActivity
 import com.hankkin.jetpack_note.utils.StatusBarUtil
 import com.tbruyelle.rxpermissions2.RxPermissions
 
@@ -89,7 +88,6 @@ class MainActivity : AppCompatActivity() {
             .subscribe { p0 ->
                 when {
                     p0.granted -> {
-                        startActivity(Intent(this, DetectorActivity::class.java))
                     }
                     p0.shouldShowRequestPermissionRationale -> {
                     }

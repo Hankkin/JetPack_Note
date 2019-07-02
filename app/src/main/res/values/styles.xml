@@ -42,4 +42,5 @@
         <attr name="shiftDuration" format="reference"/>
         <attr name="shiftInterpolator" format="reference"/>
     </declare-styleable>
+
 </resources>
