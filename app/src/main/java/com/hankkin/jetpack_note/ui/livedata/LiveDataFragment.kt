@@ -32,7 +32,6 @@ class LiveDataFragment : Fragment() {
         return inflater.inflate(R.layout.fragment_live_data, container, false)
     }
 
-
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         liveData = MutableLiveData()
@@ -53,7 +52,6 @@ class LiveDataFragment : Fragment() {
         }
         viewModel.bean.observe(this, Observer { tv_livedata_map.text = if (it.isEmpty()) "暂无数据" else it })
     }
-
 
     override fun onStart() {
         super.onStart()
