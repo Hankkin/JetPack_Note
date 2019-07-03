@@ -51,7 +51,6 @@
 
 
         <com.google.android.material.button.MaterialButton
-                android:backgroundTint="@color/theme"
                 android:layout_marginStart="@dimen/dp10"
                 android:layout_marginBottom="@dimen/dp10"
                 android:textSize="@dimen/sp16"
@@ -59,6 +58,17 @@
                 android:paddingLeft="@dimen/dp10"
                 android:id="@+id/btn_observer_data"
                 android:text="@string/start_oberver"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        <com.google.android.material.button.MaterialButton
+                android:layout_marginStart="@dimen/dp10"
+                android:layout_marginBottom="@dimen/dp10"
+                android:textSize="@dimen/sp16"
+                android:paddingRight="@dimen/dp10"
+                android:paddingLeft="@dimen/dp10"
+                android:id="@+id/btn_observer_map"
+                android:text="@string/map_transform"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
 
@@ -77,12 +87,11 @@
                 android:padding="@dimen/dp10"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
-            <thereisnospon.codeview.CodeView
-                    android:id="@+id/code_view_livedata"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
 
-            </thereisnospon.codeview.CodeView>
+            <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_livedata_map"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
         </LinearLayout>
 
 

@@ -8,11 +8,11 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModelProviders
 import com.hankkin.jetpack_note.R
 import com.hankkin.jetpack_note.utils.FloatWindowUtils
 import com.yhao.floatwindow.FloatWindow
 import kotlinx.android.synthetic.main.fragment_live_data.*
-import thereisnospon.codeview.CodeViewTheme
 
 
 /**
@@ -21,6 +21,9 @@ import thereisnospon.codeview.CodeViewTheme
 class LiveDataFragment : Fragment() {
 
     private lateinit var liveData: MutableLiveData<String>
+    private var mId = 1
+
+    private val viewModel: LiveDataViewModel by lazy { ViewModelProviders.of(this).get(LiveDataViewModel::class.java) }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -45,8 +48,10 @@ class LiveDataFragment : Fragment() {
             }
             liveData.observeForever(statusObserver)
         }
-        code_view_livedata.setTheme(CodeViewTheme.ARDUINO_LIGHT).fillColor()
-        code_view_livedata.showCode(resources.getString(R.string.livedata_code))
+        btn_observer_map.setOnClickListener {
+            viewModel.id.postValue("${mId++}")
+        }
+        viewModel.bean.observe(this, Observer { tv_livedata_map.text = if (it.isEmpty()) "暂无数据" else it })
     }
 
 
@@ -54,7 +59,6 @@ class LiveDataFragment : Fragment() {
         super.onStart()
         liveData.value = "onStart()"
     }
-
 
     override fun onPause() {
         super.onPause()
