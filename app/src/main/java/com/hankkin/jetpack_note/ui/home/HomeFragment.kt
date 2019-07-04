@@ -17,7 +17,7 @@ import com.hankkin.jetpack_note.utils.InjectorUtils
 import kotlinx.android.synthetic.main.fragment_home.*
 
 class HomeFragment : Fragment() {
-    private var isLine: Boolean = true
+    private var isLine: Boolean = false
 
     private val viewModel: HomeListViewModel by viewModels {
         InjectorUtils.provideHomeListViewModelFactory(requireContext())

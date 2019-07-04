@@ -56,44 +56,6 @@
     <string name="clear">清空</string>
     <string name="close">关闭</string>
     <string name="move">拖动</string>
-
-    <string name="lifecycle_codes">
-        static class BoundLocationListener implements LifecycleObserver {\n"
-        " private final Context mContext;\n"
-        " private LocationManager mLocationManager;\n"
-        " private final LocationListener mListener;\n"
-        "\n"
-        " BoundLocationListener(LifecycleOwner lifecycleOwner,\n"
-        " LocationListener listener, Context context) {\n"
-        " mContext = context;\n"
-        " mListener = listener;\n"
-        " lifecycleOwner.getLifecycle().addObserver(this);\n"
-        " }\n"
-        "\n"
-        " @OnLifecycleEvent(Lifecycle.Event.ON_RESUME)\n"
-        " void addLocationListener() {\n"
-        " mLocationManager = (LocationManager) mContext.getSystemService(Context.LOCATION_SERVICE);\n"
-        " mLocationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 0, 0, mListener);\n"
-        " FloatWindowUtils.INSTANCE.addViewContent(\"ON_RESUME--开启定位监听\");\n"
-        " Location lastLocation = mLocationManager.getLastKnownLocation(\n"
-        " LocationManager.GPS_PROVIDER);\n"
-        " if (lastLocation != null) {\n"
-        " mListener.onLocationChanged(lastLocation);\n"
-        " }\n"
-        " }\n"
-        "\n"
-        "\n"
-        " @OnLifecycleEvent(Lifecycle.Event.ON_PAUSE)\n"
-        " void removeLocationListener() {\n"
-        " if (mLocationManager == null) {\n"
-        " return;\n"
-        " }\n"
-        " mLocationManager.removeUpdates(mListener);\n"
-        " mLocationManager = null;\n"
-        " FloatWindowUtils.INSTANCE.addViewContent(\"ON_PAUSE--停止定位监听\");\n"
-        " }\n"
-        " }
-    </string>
     <string name="start_monitor">1.开启监听</string>
     <string name="start_location">2.开启定位</string>
     <string name="location_msg">位置信息:</string>
@@ -106,69 +68,10 @@
     <string name="livedata_hint">
         本Demo通过生命周期观察LiveData的值，并将它打印在控制台中，点击\'开始观察数据\'按钮，通过演示生命周期函数，返回桌面或者进入后台，查看LiveData对象的值。
     </string>
-    <string name="livedata_code">
-        class LiveDataFragment : Fragment() {\n"
-        "\n"
-        " private lateinit var liveData: MutableLiveData\n"
-        "\n"
-        " override fun onCreateView(\n"
-        " inflater: LayoutInflater, container: ViewGroup?,\n"
-        " savedInstanceState: Bundle?\n"
-        " ): View? {\n"
-        " return inflater.inflate(R.layout.fragment_live_data, container, false)\n"
-        " }\n"
-        "\n"
-        "\n"
-        " override fun onActivityCreated(savedInstanceState: Bundle?) {\n"
-        " super.onActivityCreated(savedInstanceState)\n"
-        " FloatWindowUtils.clear()\n"
-        " liveData = MutableLiveData()\n"
-        " btn_observer_data.setOnClickListener {\n"
-        " if (FloatWindow.get() == null) {\n"
-        " FloatWindowUtils.init(activity?.application!!)\n"
-        " }\n"
-        " FloatWindowUtils.show()\n"
-        "\n"
-        " //创建一个观察者去更新UI\n"
-        " val statusObserver = Observer{ lifeStatus ->\n"
-        " FloatWindowUtils.addViewContent(\"LiveData-onChanged: lifeStatus\")\n"
-        " }\n"
-        " liveData.observeForever(statusObserver)\n"
-        " btn_observer_data.isEnabled = false\n"
-        " btn_observer_data.setTextColor(resources.getColor(R.color.subTitleTxt))\n"
-        " }\n"
-        " code_view_livedata.setTheme(CodeViewTheme.ARDUINO_LIGHT).fillColor()\n"
-        " code_view_livedata.showCode(resources.getString(R.string.livedata_code))\n"
-        " }\n"
-        "\n"
-        "\n"
-        " override fun onStart() {\n"
-        " super.onStart()\n"
-        " liveData.value = \"onStart()\"\n"
-        " }\n"
-        "\n"
-        "\n"
-        " override fun onPause() {\n"
-        " super.onPause()\n"
-        " liveData.value = \"onPause()\"\n"
-        " }\n"
-        "\n"
-        " override fun onStop() {\n"
-        " super.onStop()\n"
-        " liveData.value = \"onStop()\"\n"
-        " }\n"
-        "\n"
-        " override fun onDestroy() {\n"
-        " super.onDestroy()\n"
-        " liveData.value = \"onDestroy()\"\n"
-        " }\n"
-        "\n"
-        "}
-    </string>
     <string name="start_oberver">开始观察数据</string>
     <string name="viewmodel_fragment_demo">查看Fragment共享Demo</string>
     <string name="demo_activity_fragment_fragment_seekbar_viewmodel_fragment_seekbar_hint">
         本Demo展示了一个Activity中存在两个Fragment，并且两个Fragment中需要同时使用SeekBar的数据。通过ViewModel实现两个Fragment中的SeekBar的值保持统一
     </string>
-    <string name="map_transform">MAP转换</string>
+    <string name="map_transform">MAP转换+1</string>
 </resources>

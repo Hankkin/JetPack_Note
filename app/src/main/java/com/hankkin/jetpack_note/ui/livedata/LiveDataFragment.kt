@@ -50,7 +50,7 @@ class LiveDataFragment : Fragment() {
         btn_observer_map.setOnClickListener {
             viewModel.id.postValue("${mId++}")
         }
-        viewModel.bean.observe(this, Observer { tv_livedata_map.text = if (it.isEmpty()) "暂无数据" else it })
+        viewModel.bean.observe(this, Observer { tv_livedata_map.text = it ?: "暂无数据" })
     }
 
     override fun onStart() {
