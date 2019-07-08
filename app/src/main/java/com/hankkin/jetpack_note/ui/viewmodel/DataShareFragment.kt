@@ -18,13 +18,13 @@ import kotlinx.android.synthetic.main.fragment_data_share.*
  */
 class DataShareFragment : Fragment() {
 
-    private lateinit var mViewModel: SeekBarViewModel
+    private lateinit var mViewModel: DemoViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        mViewModel = ViewModelProviders.of(activity!!).get(SeekBarViewModel::class.java)
+        mViewModel = ViewModelProviders.of(activity!!).get(DemoViewModel::class.java)
         return inflater.inflate(R.layout.fragment_data_share, container, false)
     }
 

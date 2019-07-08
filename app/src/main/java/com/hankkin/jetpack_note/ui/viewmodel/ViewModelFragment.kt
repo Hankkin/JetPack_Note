@@ -27,12 +27,6 @@ class ViewModelFragment : Fragment() {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-
-
-    }
-
-    override fun onStart() {
-        super.onStart()
         val vm = ViewModelProviders.of(this).get(DemoViewModel::class.java)
         if (vm.time == null) {
             vm.time = SystemClock.elapsedRealtime()

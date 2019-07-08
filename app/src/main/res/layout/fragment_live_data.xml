@@ -13,7 +13,7 @@
             app:cardCornerRadius="@dimen/dp2"
             android:layout_margin="@dimen/dp10"
             android:layout_width="match_parent"
-            android:layout_height="200dp">
+            android:layout_height="wrap_content">
 
         <LinearLayout
                 android:padding="@dimen/dp10"
@@ -31,7 +31,7 @@
             <androidx.appcompat.widget.AppCompatTextView
                     android:lineSpacingExtra="@dimen/dp2"
                     style="@style/normalTxt"
-                    android:layout_marginTop="@dimen/dp20"
+                    android:layout_marginTop="@dimen/dp10"
                     android:text="@string/livedata_hint"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"/>
@@ -41,6 +41,40 @@
 
     </com.google.android.material.card.MaterialCardView>
 
+
+
+
+    <com.google.android.material.card.MaterialCardView
+            app:cardElevation="@dimen/dp2"
+            app:cardCornerRadius="@dimen/dp2"
+            android:layout_margin="@dimen/dp10"
+            android:layout_width="match_parent"
+            android:layout_height="100dp">
+
+        <LinearLayout
+                android:orientation="vertical"
+                android:padding="@dimen/dp10"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                    android:textStyle="bold"
+                    android:text="@string/map_transform_hint"
+                    style="@style/normalTxt"
+                    android:layout_marginTop="@dimen/dp10"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_marginTop="@dimen/dp10"
+                    style="@style/normalTxt"
+                    android:id="@+id/tv_livedata_map"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+
+    </com.google.android.material.card.MaterialCardView>
 
     <LinearLayout
             android:layout_marginTop="@dimen/dp20"
@@ -52,50 +86,27 @@
 
         <com.google.android.material.button.MaterialButton
                 android:layout_marginStart="@dimen/dp10"
-                android:layout_marginBottom="@dimen/dp10"
+                android:layout_marginEnd="@dimen/dp10"
                 android:textSize="@dimen/sp16"
-                android:paddingRight="@dimen/dp10"
-                android:paddingLeft="@dimen/dp10"
                 android:id="@+id/btn_observer_data"
                 android:text="@string/start_oberver"
-                android:layout_width="wrap_content"
+                android:layout_weight="1"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"/>
 
         <com.google.android.material.button.MaterialButton
+                android:layout_marginEnd="@dimen/dp10"
                 android:layout_marginStart="@dimen/dp10"
                 android:layout_marginBottom="@dimen/dp10"
                 android:textSize="@dimen/sp16"
-                android:paddingRight="@dimen/dp10"
-                android:paddingLeft="@dimen/dp10"
                 android:id="@+id/btn_observer_map"
                 android:text="@string/map_transform"
-                android:layout_width="wrap_content"
+                android:layout_weight="1"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"/>
 
 
     </LinearLayout>
-
-
-    <com.google.android.material.card.MaterialCardView
-            app:cardElevation="@dimen/dp2"
-            app:cardCornerRadius="@dimen/dp2"
-            android:layout_margin="@dimen/dp10"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-        <LinearLayout
-                android:padding="@dimen/dp10"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-            <androidx.appcompat.widget.AppCompatTextView
-                    android:id="@+id/tv_livedata_map"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
-        </LinearLayout>
-
-
-    </com.google.android.material.card.MaterialCardView>
 
 
 </LinearLayout>

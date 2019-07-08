@@ -41,8 +41,8 @@
                         <androidx.appcompat.widget.AppCompatTextView
                                 android:lineSpacingExtra="@dimen/dp2"
                                 style="@style/normalTxt"
-                                android:layout_marginTop="@dimen/dp20"
-                                android:text="@string/livedata_hint"
+                                android:layout_marginTop="@dimen/dp10"
+                                android:text="@string/viewmodel_hint"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"/>
 
@@ -74,7 +74,6 @@
 
                 <com.google.android.material.button.MaterialButton
                         android:id="@+id/btn_fragment_share"
-                        android:backgroundTint="@color/theme"
                         android:text="@string/viewmodel_fragment_demo"
                         android:layout_marginTop="@dimen/dp20"
                         android:layout_gravity="center"

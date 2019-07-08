@@ -1,5 +1,6 @@
 package com.hankkin.jetpack_note.ui.viewmodel
 
+import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
 /**
@@ -10,4 +11,6 @@ import androidx.lifecycle.ViewModel
 class DemoViewModel : ViewModel() {
 
     var time: Long? = null
+
+    var seekbarValue = MutableLiveData<Int>()
 }

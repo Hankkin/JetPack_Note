@@ -21,7 +21,7 @@ import kotlinx.android.synthetic.main.fragment_live_data.*
 class LiveDataFragment : Fragment() {
 
     private lateinit var liveData: MutableLiveData<String>
-    private var mId = 1
+    private var mId = -1
 
     private val viewModel: LiveDataViewModel by lazy { ViewModelProviders.of(this).get(LiveDataViewModel::class.java) }
 
@@ -47,10 +47,16 @@ class LiveDataFragment : Fragment() {
             }
             liveData.observeForever(statusObserver)
         }
+
+        //改变ViewModel中idLiveData中的值
         btn_observer_map.setOnClickListener {
-            viewModel.id.postValue("${mId++}")
+            mId++
+            viewModel.id.postValue(mId)
         }
-        viewModel.bean.observe(this, Observer { tv_livedata_map.text = it ?: "暂无数据" })
+        //当idLiveData变化后，UserBean也会改变且更新Textview的文本
+        viewModel.bean.observe(
+            this,
+            Observer { tv_livedata_map.text = if (it == null) "未查找到User" else "为你查找到的User为：${it.name}" })
     }
 
     override fun onStart() {
