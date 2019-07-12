@@ -35,7 +35,7 @@ class DataShareFragment : Fragment() {
     }
 
     private fun subscribeSeekBar() {
-        // Update the ViewModel when the SeekBar is changed.
+        // 监听SeekBar改变ViewModel的中的值
         seekBar.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
             override fun onProgressChanged(seekBar: SeekBar, progress: Int, fromUser: Boolean) {
                 if (fromUser) {
@@ -47,8 +47,7 @@ class DataShareFragment : Fragment() {
 
             override fun onStopTrackingTouch(seekBar: SeekBar) {}
         })
-
-        // Update the SeekBar when the ViewModel is changed.
+        // 当ViewModel中的值发生变化时，更新SeekBar
         activity?.let {
             mViewModel.seekbarValue.observe(it, Observer<Int> { value ->
                 if (value != null) {
@@ -57,6 +56,4 @@ class DataShareFragment : Fragment() {
             })
         }
     }
-
-
 }
