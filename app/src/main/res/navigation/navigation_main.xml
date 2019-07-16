@@ -27,8 +27,8 @@
     </fragment>
 
     <fragment android:id="@+id/codeFragment"
-              android:name="com.hankkin.jetpack_note.ui.CodeFragment"
-              android:label="@string/menu_code"/>
+              android:name="com.hankkin.jetpack_note.ui.livedata.LiveDataFragment"
+              android:label="@string/menu_live_data"/>
 
     <fragment android:id="@+id/navigationFragment"
               android:name="com.hankkin.jetpack_note.ui.navigation.NavigationFragment"

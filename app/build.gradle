@@ -52,7 +52,6 @@ dependencies {
     implementation "androidx.viewpager2:viewpager2:$rootProject.viewPager2Version"
 
 
-    implementation "thereisnospon.codeview:codeview:0.3.1"
     implementation "com.github.yhaolpz:FloatWindow:1.0.9"
     implementation 'com.github.tbruyelle:rxpermissions:0.10.2'
 

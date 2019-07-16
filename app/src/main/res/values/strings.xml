@@ -11,7 +11,6 @@
     <string name="action_copy">复制链接</string>
 
     <string name="menu_home">首页</string>
-    <string name="menu_code">代码</string>
     <string name="menu_more">更多案例</string>
     <string name="menu_lifecycle">Lifecycles</string>
     <string name="menu_navigation">Navigation</string>
@@ -66,9 +65,9 @@
     <string name="life_recommend">1.提示</string>
     <string name="has_location_hint">您已经开启定位…</string>
     <string name="viewmodel_hint">1.本Demo展示ViewModel的功能，屏幕中央为一个计时器，通过使用ViewModel存储计时器的值，将屏幕方向发生改变后，数据仍然存在不会销毁。
-    \n2.通过点击'查看Fragment共享Demo'可以查看两个Fragment共享了同一个ViewModel中的SeekBar的值。</string>
+        \n2.通过点击 查看Fragment共享Demo 可以查看两个Fragment共享了同一个ViewModel中的SeekBar的值。</string>
     <string name="livedata_hint">
-        1. 本Demo通过生命周期观察LiveData的值，并将它打印在控制台中，点击\'开始观察数据\'按钮，通过演示生命周期函数，返回桌面或者进入后台，查看LiveData对象的值。
+        1. 本Demo通过生命周期观察LiveData的值，并将它打印在控制台中，点击 开始观察数据 按钮，通过演示生命周期函数，返回桌面或者进入后台，查看LiveData对象的值。
         \n2. Map转换则演示通过转换存储在LiveData对象中的值，并向下传递转换后的数据。在此Demo中通过点击Map按钮增加UserId，驱动LiveDataViewModel中的userBean来改变，最后展示在TextView中。
     </string>
     <string name="start_oberver">开始观察数据</string>

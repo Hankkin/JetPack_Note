@@ -5,21 +5,17 @@ import android.annotation.SuppressLint
 import android.location.Location
 import android.location.LocationListener
 import android.os.Bundle
-import android.os.Handler
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.hankkin.jetpack_note.R
-import com.hankkin.jetpack_note.base.BaseFragment
 import com.hankkin.jetpack_note.ext.snackBarShow
 import com.hankkin.jetpack_note.utils.FloatWindowUtils
 import com.tbruyelle.rxpermissions2.RxPermissions
 import com.yhao.floatwindow.FloatWindow
 import kotlinx.android.synthetic.main.fragment_lifecycles.*
-import kotlinx.android.synthetic.main.layout_loading.*
-import thereisnospon.codeview.CodeViewTheme
 
 class LifecyclesFragment : Fragment() {
 

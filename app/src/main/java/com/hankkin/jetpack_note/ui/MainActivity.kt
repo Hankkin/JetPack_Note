@@ -41,6 +41,7 @@ class MainActivity : AppCompatActivity() {
             setOf(
                 R.id.homeFragment,
                 R.id.codeFragment,
+                R.id.liveDataFragment,
                 R.id.navigationFragment,
                 R.id.lifecyclesFragment,
                 R.id.moreSampleActivity
