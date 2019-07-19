@@ -1,0 +1,32 @@
+<layout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+                name="clickListener"
+                type="android.view.View.OnClickListener"/>
+        <variable
+                name="user"
+                type="com.hankkin.jetpack_note.data.User"/>
+    </data>
+
+
+    <LinearLayout
+            android:onClick="@{clickListener}"
+            android:focusable="true"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:background="?attr/selectableItemBackground"
+            android:padding="@dimen/dp10"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <TextView
+                style="@style/normalTxt"
+                android:text="@{user.name}"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+    </LinearLayout>
+</layout>

@@ -33,16 +33,16 @@ import com.hankkin.jetpack_note.workers.SeedDatabaseWorker
  */
 @Database(entities = [Component::class], version = 1, exportSchema = false)
 @TypeConverters(Converters::class)
-abstract class AppDatabase : RoomDatabase() {
+abstract class HomeDatabase : RoomDatabase() {
 
     abstract fun homeDao(): HomeDao
 
     companion object {
 
         // For Singleton instantiation
-        @Volatile private var instance: AppDatabase? = null
+        @Volatile private var instance: HomeDatabase? = null
 
-        fun getInstance(context: Context): AppDatabase {
+        fun getInstance(context: Context): HomeDatabase {
             return instance ?: synchronized(this) {
                 instance ?: buildDatabase(context).also { instance = it }
             }
@@ -50,8 +50,8 @@ abstract class AppDatabase : RoomDatabase() {
 
         // Create and pre-populate the database. See this article for more details:
         // https://medium.com/google-developers/7-pro-tips-for-room-fbadea4bfbd1#4785
-        private fun buildDatabase(context: Context): AppDatabase {
-            return Room.databaseBuilder(context, AppDatabase::class.java, DATABASE_NAME)
+        private fun buildDatabase(context: Context): HomeDatabase {
+            return Room.databaseBuilder(context, HomeDatabase::class.java, DATABASE_NAME)
                     .addCallback(object : RoomDatabase.Callback() {
                         override fun onCreate(db: SupportSQLiteDatabase) {
                             super.onCreate(db)

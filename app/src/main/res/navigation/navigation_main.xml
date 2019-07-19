@@ -74,6 +74,10 @@
               android:name="com.hankkin.jetpack_note.ui.lifecycles.LifecyclesFragment"
               android:label="Lifecycles"/>
 
+    <fragment android:id="@+id/pagingDemoFragment"
+              android:name="com.hankkin.jetpack_note.ui.paging.PagingDemoFragment"
+              android:label="分页加载"/>
+
     <fragment android:id="@+id/liveDataFragment"
               android:name="com.hankkin.jetpack_note.ui.livedata.LiveDataFragment"
               android:label="LiveData"

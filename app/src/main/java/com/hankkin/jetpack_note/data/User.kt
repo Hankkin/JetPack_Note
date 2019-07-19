@@ -1,7 +1,11 @@
 package com.hankkin.jetpack_note.data
 
+import androidx.room.Entity
+import androidx.room.PrimaryKey
+
 /**
  * created by ${Hankkin}
  * on 2019-07-08
  */
-data class User(val id: Int, val name: String)
+@Entity
+data class User(@PrimaryKey(autoGenerate = true) val id: Int, val name: String)

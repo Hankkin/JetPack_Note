@@ -18,6 +18,7 @@ import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.hankkin.jetpack_note.R
 import com.hankkin.jetpack_note.databinding.ActivityMainBinding
+import com.hankkin.jetpack_note.utils.FloatWindowUtils
 import com.hankkin.jetpack_note.utils.StatusBarUtil
 import com.tbruyelle.rxpermissions2.RxPermissions
 
@@ -41,10 +42,9 @@ class MainActivity : AppCompatActivity() {
             setOf(
                 R.id.homeFragment,
                 R.id.codeFragment,
-                R.id.liveDataFragment,
+                R.id.pagingDemoFragment,
                 R.id.navigationFragment,
-                R.id.lifecyclesFragment,
-                R.id.moreSampleActivity
+                R.id.lifecyclesFragment
             ), drawerLayout
         )
         setSupportActionBar(mDataBinding.toolbar)
@@ -94,5 +94,10 @@ class MainActivity : AppCompatActivity() {
                     }
                 }
             }
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        FloatWindowUtils.destroy()
     }
 }

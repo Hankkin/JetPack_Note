@@ -8,10 +8,6 @@
                 android:id="@+id/homeFragment"
                 android:icon="@drawable/ic_menu_home"
                 android:title="@string/menu_home"/>
-        <item
-                android:id="@+id/liveDataFragment"
-                android:icon="@drawable/ic_menu_code"
-                android:title="@string/menu_live_data"/>
 
         <item
                 android:id="@+id/navigationFragment"
@@ -23,6 +19,10 @@
                 android:icon="@drawable/ic_menu_lifecycle"
                 android:title="@string/menu_lifecycle"/>
 
+        <item
+                android:id="@+id/pagingDemoFragment"
+                android:icon="@drawable/ic_menu_code"
+                android:title="@string/menu_paging"/>
 
         <item
                 android:id="@+id/moreSampleFragment"

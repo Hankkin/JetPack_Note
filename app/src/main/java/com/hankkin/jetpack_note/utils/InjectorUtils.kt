@@ -1,7 +1,7 @@
 package com.hankkin.jetpack_note.utils
 
 import android.content.Context
-import com.hankkin.jetpack_note.data.AppDatabase
+import com.hankkin.jetpack_note.data.HomeDatabase
 import com.hankkin.jetpack_note.ui.home.HomeLIstViewModelFactory
 import com.hankkin.jetpack_note.ui.home.HomeRepository
 
@@ -14,7 +14,7 @@ object InjectorUtils {
 
     private fun getHomeRepository(context: Context): HomeRepository {
         return HomeRepository.getInstance(
-            AppDatabase.getInstance(context.applicationContext).homeDao())
+            HomeDatabase.getInstance(context.applicationContext).homeDao())
     }
 
     fun provideHomeListViewModelFactory(context: Context): HomeLIstViewModelFactory {

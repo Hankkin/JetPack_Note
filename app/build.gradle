@@ -36,31 +36,37 @@ dependencies {
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     implementation 'com.google.android.material:material:1.0.0'
     implementation 'androidx.vectordrawable:vectordrawable:1.0.1'
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.0.0'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.0.0'
     kapt "androidx.room:room-compiler:$rootProject.roomVersion"
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlinVersion"
     implementation "androidx.appcompat:appcompat:$rootProject.supportLibraryVersion"
     implementation "androidx.core:core-ktx:$rootProject.supportLibraryVersion"
-    implementation "com.google.android.material:material:$materialVersion"
     implementation "androidx.room:room-runtime:$rootProject.roomVersion"
     implementation "androidx.work:work-runtime-ktx:$rootProject.workVersion"
-    implementation "com.google.code.gson:gson:$rootProject.gsonVersion"
     implementation "androidx.fragment:fragment-ktx:$rootProject.fragmentVersion"
-    implementation "com.just.agentweb:agentweb:$rootProject.agentWebVersion"
     implementation "androidx.navigation:navigation-fragment-ktx:$rootProject.navigationVersion"
     implementation "androidx.navigation:navigation-ui-ktx:$rootProject.navigationVersion"
     implementation "androidx.viewpager2:viewpager2:$rootProject.viewPager2Version"
+    implementation "androidx.paging:paging-runtime:$paging_version" // For Kotlin use paging-runtime-ktx
+    implementation "androidx.paging:paging-runtime-ktx:$paging_version" // For Kotlin use paging-runtime-ktx
+    // alternatively - without Android dependencies for testing
+    testImplementation "androidx.paging:paging-common:$paging_version" // For Kotlin use paging-common-ktx
+    // optional - RxJava support
+    implementation "androidx.paging:paging-rxjava2:$paging_version" // For Kotlin use paging-rxjava2-ktx
 
+    implementation "com.google.android.material:material:$materialVersion"
+    implementation "com.just.agentweb:agentweb:$rootProject.agentWebVersion"
 
     implementation "com.github.yhaolpz:FloatWindow:1.0.9"
     implementation 'com.github.tbruyelle:rxpermissions:0.10.2'
-
     implementation 'io.reactivex.rxjava2:rxjava:2.2.8'
     implementation 'io.reactivex.rxjava2:rxandroid:2.1.1'
-
+    implementation "com.squareup.retrofit2:retrofit:$retrofitVersion"
+    implementation "com.squareup.retrofit2:converter-gson:$retrofitVersion"
 
     //test
     implementation "androidx.legacy:legacy-support-v4:$materialVersion"
     testImplementation "junit:junit:$rootProject.junitVersion"
-    implementation 'com.squareup.retrofit2:retrofit:2.6.0'
 }

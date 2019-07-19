@@ -17,10 +17,12 @@ buildscript {
         materialVersion = '1.0.0'
         roomVersion = '2.1.0-beta01'
         workVersion = '2.1.0-alpha02'
+        paging_version = "2.1.0"
         gsonVersion = '2.8.2'
         fragmentVersion = '1.1.0-alpha09'
         viewPager2Version = '1.0.0-alpha05'
         agentWebVersion = '4.0.2'
+        retrofitVersion = '2.5.0'
 
         supportLibraryVersion = '1.1.0-alpha05'
         constraintLayoutVersion = '2.0.0-beta1'

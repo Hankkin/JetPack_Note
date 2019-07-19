@@ -8,7 +8,7 @@ import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 import com.google.gson.stream.JsonReader
 import com.hankkin.jetpack_note.data.Component
-import com.hankkin.jetpack_note.data.AppDatabase
+import com.hankkin.jetpack_note.data.HomeDatabase
 import com.hankkin.jetpack_note.utils.COMPONENT_DATA_FILENAME
 import kotlinx.coroutines.coroutineScope
 
@@ -30,7 +30,7 @@ class SeedDatabaseWorker (
                 JsonReader(inputStream.reader()).use { jsonReader ->
                     val plantType = object : TypeToken<List<Component>>() {}.type
                     val plantList: List<Component> = Gson().fromJson(jsonReader,plantType)
-                    val database = AppDatabase.getInstance(applicationContext)
+                    val database = HomeDatabase.getInstance(applicationContext)
                     database.homeDao().insertAll(plantList)
 
                     Result.success()
