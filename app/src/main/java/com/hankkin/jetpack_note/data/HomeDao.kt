@@ -1,4 +1,4 @@
-package com.hankkin.jetpack_note.ui.home
+package com.hankkin.jetpack_note.data
 
 import androidx.lifecycle.LiveData
 import androidx.room.Dao

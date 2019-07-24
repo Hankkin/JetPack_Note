@@ -1,4 +1,4 @@
-package com.hankkin.jetpack_note.ui.home
+package com.hankkin.jetpack_note.data
 
 /**
  * @author Hankkin
@@ -16,7 +16,8 @@ class HomeRepository private constructor(private val homeDao: HomeDao) {
 
         fun getInstance(plantDao: HomeDao) =
             instance ?: synchronized(this) {
-                instance ?: HomeRepository(plantDao).also { instance = it }
+                instance
+                    ?: HomeRepository(plantDao).also { instance = it }
             }
     }
 

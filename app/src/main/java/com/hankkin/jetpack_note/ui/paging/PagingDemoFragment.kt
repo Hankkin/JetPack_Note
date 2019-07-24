@@ -9,7 +9,7 @@ import android.view.ViewGroup
 import androidx.lifecycle.Observer
 
 import com.hankkin.jetpack_note.R
-import com.hankkin.jetpack_note.adapter.PagingDemoAdapter
+import com.hankkin.jetpack_note.ui.adapter.PagingDemoAdapter
 import kotlinx.android.synthetic.main.paging_demo_fragment.*
 
 class PagingDemoFragment : Fragment() {

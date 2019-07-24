@@ -9,12 +9,10 @@ import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.hankkin.jetpack_note.R
-import com.hankkin.jetpack_note.adapter.HomeListAdapter
+import com.hankkin.jetpack_note.ui.adapter.HomeListAdapter
 import com.hankkin.jetpack_note.databinding.FragmentHomeBinding
 import com.hankkin.jetpack_note.utils.InjectorUtils
-import kotlinx.android.synthetic.main.fragment_home.*
 
 class HomeFragment : Fragment() {
     private var isLine: Boolean = false

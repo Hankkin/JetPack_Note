@@ -1,4 +1,4 @@
-package com.hankkin.jetpack_note.adapter
+package com.hankkin.jetpack_note.ui.adapter
 
 import android.view.LayoutInflater
 import android.view.View

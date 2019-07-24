@@ -24,7 +24,6 @@ import androidx.room.TypeConverters
 import androidx.sqlite.db.SupportSQLiteDatabase
 import androidx.work.OneTimeWorkRequestBuilder
 import androidx.work.WorkManager
-import com.hankkin.jetpack_note.ui.home.HomeDao
 import com.hankkin.jetpack_note.utils.DATABASE_NAME
 import com.hankkin.jetpack_note.workers.SeedDatabaseWorker
 

@@ -3,7 +3,7 @@ package com.hankkin.jetpack_note.utils
 import android.content.Context
 import com.hankkin.jetpack_note.data.HomeDatabase
 import com.hankkin.jetpack_note.ui.home.HomeLIstViewModelFactory
-import com.hankkin.jetpack_note.ui.home.HomeRepository
+import com.hankkin.jetpack_note.data.HomeRepository
 
 /**
  * @author Hankkin

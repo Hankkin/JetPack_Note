@@ -1,4 +1,4 @@
-package com.hankkin.jetpack_note.adapter
+package com.hankkin.jetpack_note.ui.adapter
 
 import android.view.LayoutInflater
 import android.view.View
@@ -7,7 +7,6 @@ import android.widget.Toast
 import androidx.paging.PagedListAdapter
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
-import com.google.android.material.snackbar.Snackbar
 import com.hankkin.jetpack_note.data.User
 import com.hankkin.jetpack_note.databinding.AdapterPagingItemBinding
 
