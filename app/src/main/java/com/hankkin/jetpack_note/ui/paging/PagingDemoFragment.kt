@@ -1,15 +1,13 @@
 package com.hankkin.jetpack_note.ui.paging
 
-import androidx.lifecycle.ViewModelProviders
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.lifecycle.Observer
-
+import androidx.fragment.app.Fragment
+import androidx.navigation.Navigation
+import androidx.navigation.fragment.findNavController
 import com.hankkin.jetpack_note.R
-import com.hankkin.jetpack_note.ui.adapter.PagingDemoAdapter
 import kotlinx.android.synthetic.main.paging_demo_fragment.*
 
 class PagingDemoFragment : Fragment() {
@@ -18,7 +16,6 @@ class PagingDemoFragment : Fragment() {
         fun newInstance() = PagingDemoFragment()
     }
 
-    private lateinit var viewModel: PagingDemoViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -29,11 +26,8 @@ class PagingDemoFragment : Fragment() {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProviders.of(this).get(PagingDemoViewModel::class.java)
-
-        val adapter = PagingDemoAdapter()
-        rv_paging.adapter = adapter
-        viewModel.allUsers.observe(this, Observer(adapter::submitList))
+        btn_paging_dao.setOnClickListener { findNavController().navigate(R.id.pagingWithDaoActivity) }
+        btn_paging_net.setOnClickListener { findNavController().navigate(R.id.pagingWithNetWorkActivity) }
     }
 
 }

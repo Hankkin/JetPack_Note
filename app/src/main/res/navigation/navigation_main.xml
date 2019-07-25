@@ -94,8 +94,19 @@
               android:name="com.hankkin.jetpack_note.ui.viewmodel.ViewModelShareActivity"
               android:label="activity_view_model_share"
               tools:layout="@layout/activity_view_model_share"/>
+
     <activity android:id="@+id/moreSampleActivity"
               android:name="com.hankkin.jetpack_note.ui.MoreSampleActivity"
               android:label="activity_more_sample"
               tools:layout="@layout/activity_more_sample"/>
+
+    <activity android:id="@+id/pagingWithDaoActivity"
+              android:name="com.hankkin.jetpack_note.ui.paging.PagingWithDaoActivity"
+              android:label="activity_paging_with_dao"
+              tools:layout="@layout/activity_paging_with_dao"/>
+
+    <activity android:id="@+id/pagingWithNetWorkActivity"
+              android:name="com.hankkin.jetpack_note.ui.paging.PagingWithNetWorkActivity"
+              android:label="activity_paging_with_net_work"
+              tools:layout="@layout/activity_paging_with_net_work"/>
 </navigation>

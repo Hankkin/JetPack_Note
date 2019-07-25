@@ -8,7 +8,7 @@ import com.hankkin.jetpack_note.data.UserDB
 import com.hankkin.jetpack_note.data.ioThread
 import androidx.paging.Config
 
-class PagingDemoViewModel(app: Application) : AndroidViewModel(app) {
+class PagingWithDaoViewModel(app: Application) : AndroidViewModel(app) {
 
     val dao = UserDB.get(app).userDao()
 

@@ -12,14 +12,13 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.hankkin.jetpack_note.R
 import com.hankkin.jetpack_note.ui.adapter.HomeListAdapter
 import com.hankkin.jetpack_note.databinding.FragmentHomeBinding
-import com.hankkin.jetpack_note.utils.InjectorUtils
+import com.hankkin.jetpack_note.ext.obtainViewModel
+import com.hankkin.jetpack_note.utils.Injection
 
 class HomeFragment : Fragment() {
-    private var isLine: Boolean = false
 
-    private val viewModel: HomeListViewModel by viewModels {
-        InjectorUtils.provideHomeListViewModelFactory(requireContext())
-    }
+    private var isLine: Boolean = false
+    private lateinit var viewModel: HomeListViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -28,7 +27,6 @@ class HomeFragment : Fragment() {
     ): View? {
         val binding = FragmentHomeBinding.inflate(inflater, container, false)
         context ?: return binding.root
-
         val adapter = HomeListAdapter()
         binding.rvHome.adapter = adapter
         subscribeUi(adapter, binding)
@@ -37,6 +35,7 @@ class HomeFragment : Fragment() {
 
 
     private fun subscribeUi(adapter: HomeListAdapter, binding: FragmentHomeBinding) {
+        viewModel = obtainViewModel(HomeListViewModel::class.java)
         viewModel.listData.observe(viewLifecycleOwner, Observer { data ->
             if (data != null) adapter.submitList(data)
         })
