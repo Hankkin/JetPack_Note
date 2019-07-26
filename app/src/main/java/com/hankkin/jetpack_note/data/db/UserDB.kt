@@ -1,11 +1,12 @@
-package com.hankkin.jetpack_note.data
+package com.hankkin.jetpack_note.data.db
 
 import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
 import androidx.sqlite.db.SupportSQLiteDatabase
-import com.hankkin.jetpack_note.ui.paging.UserDao
+import com.hankkin.jetpack_note.data.bean.User
+import com.hankkin.jetpack_note.data.ioThread
 
 /**
  * created by Hankkin

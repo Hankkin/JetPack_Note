@@ -1,11 +1,11 @@
-package com.hankkin.jetpack_note.ui.paging
+package com.hankkin.jetpack_note.data.db
 
 import androidx.paging.DataSource
 import androidx.room.Dao
 import androidx.room.Delete
 import androidx.room.Insert
 import androidx.room.Query
-import com.hankkin.jetpack_note.data.User
+import com.hankkin.jetpack_note.data.bean.User
 
 /**
  * created by Hankkin

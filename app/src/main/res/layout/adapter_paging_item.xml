@@ -8,7 +8,7 @@
                 type="android.view.View.OnClickListener"/>
         <variable
                 name="user"
-                type="com.hankkin.jetpack_note.data.User"/>
+                type="com.hankkin.jetpack_note.data.bean.User"/>
     </data>
 
 

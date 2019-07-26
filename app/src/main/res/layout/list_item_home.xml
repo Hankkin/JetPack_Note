@@ -8,7 +8,7 @@
                 type="android.view.View.OnClickListener"/>
         <variable
                 name="component"
-                type="com.hankkin.jetpack_note.data.Component"/>
+                type="com.hankkin.jetpack_note.data.bean.Component"/>
     </data>
 
     <com.google.android.material.card.MaterialCardView

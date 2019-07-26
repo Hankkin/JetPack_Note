@@ -1,11 +1,11 @@
-package com.hankkin.jetpack_note.data
+package com.hankkin.jetpack_note.data.db
 
 import androidx.lifecycle.LiveData
 import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
-import com.hankkin.jetpack_note.data.Component
+import com.hankkin.jetpack_note.data.bean.Component
 
 /**
  * @author Hankkin

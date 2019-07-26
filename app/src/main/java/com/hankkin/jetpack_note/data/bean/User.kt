@@ -1,4 +1,4 @@
-package com.hankkin.jetpack_note.data
+package com.hankkin.jetpack_note.data.bean
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey

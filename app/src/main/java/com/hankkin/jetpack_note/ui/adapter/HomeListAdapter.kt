@@ -7,7 +7,7 @@ import androidx.navigation.findNavController
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import com.hankkin.jetpack_note.data.Component
+import com.hankkin.jetpack_note.data.bean.Component
 import com.hankkin.jetpack_note.databinding.ListItemHomeBinding
 import com.hankkin.jetpack_note.ui.home.HomeFragmentDirections
 

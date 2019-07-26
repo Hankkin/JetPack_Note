@@ -7,7 +7,7 @@ import android.widget.Toast
 import androidx.paging.PagedListAdapter
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
-import com.hankkin.jetpack_note.data.User
+import com.hankkin.jetpack_note.data.bean.User
 import com.hankkin.jetpack_note.databinding.AdapterPagingItemBinding
 
 /**

@@ -10,6 +10,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import com.hankkin.jetpack_note.R
+import com.hankkin.jetpack_note.ext.obtainViewModel
 import com.hankkin.jetpack_note.utils.FloatWindowUtils
 import com.yhao.floatwindow.FloatWindow
 import kotlinx.android.synthetic.main.fragment_live_data.*
@@ -23,7 +24,7 @@ class LiveDataFragment : Fragment() {
     private lateinit var liveData: MutableLiveData<String>
     private var mId = -1
 
-    private val viewModel: LiveDataViewModel by lazy { ViewModelProviders.of(this).get(LiveDataViewModel::class.java) }
+    private val viewModel: LiveDataViewModel by lazy { obtainViewModel(LiveDataViewModel::class.java) }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,

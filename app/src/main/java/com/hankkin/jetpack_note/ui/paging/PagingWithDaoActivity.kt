@@ -6,6 +6,7 @@ import android.view.MenuItem
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import com.hankkin.jetpack_note.R
+import com.hankkin.jetpack_note.ext.obtainViewModel
 import com.hankkin.jetpack_note.ext.setLightMode
 import com.hankkin.jetpack_note.ext.setupToolBar
 import com.hankkin.jetpack_note.ui.adapter.PagingDemoAdapter
@@ -24,7 +25,7 @@ class PagingWithDaoActivity : AppCompatActivity() {
             title = resources.getString(R.string.paging_with_dao)
             setDisplayHomeAsUpEnabled(true)
         }
-        viewModel = ViewModelProviders.of(this).get(PagingWithDaoViewModel::class.java)
+        viewModel = obtainViewModel(PagingWithDaoViewModel::class.java)
         val adapter = PagingDemoAdapter()
         rv_paging.adapter = adapter
         viewModel.allUsers.observe(this, Observer(adapter::submitList))

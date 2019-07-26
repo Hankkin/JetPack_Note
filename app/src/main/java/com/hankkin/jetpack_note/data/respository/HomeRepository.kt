@@ -1,4 +1,6 @@
-package com.hankkin.jetpack_note.data
+package com.hankkin.jetpack_note.data.respository
+
+import com.hankkin.jetpack_note.data.db.HomeDao
 
 /**
  * @author Hankkin

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.hankkin.jetpack_note.data
+package com.hankkin.jetpack_note.data.db
 
 import android.content.Context
 import androidx.room.Database
@@ -24,6 +24,8 @@ import androidx.room.TypeConverters
 import androidx.sqlite.db.SupportSQLiteDatabase
 import androidx.work.OneTimeWorkRequestBuilder
 import androidx.work.WorkManager
+import com.hankkin.jetpack_note.data.Converters
+import com.hankkin.jetpack_note.data.bean.Component
 import com.hankkin.jetpack_note.utils.DATABASE_NAME
 import com.hankkin.jetpack_note.workers.SeedDatabaseWorker
 
@@ -32,25 +34,26 @@ import com.hankkin.jetpack_note.workers.SeedDatabaseWorker
  */
 @Database(entities = [Component::class], version = 1, exportSchema = false)
 @TypeConverters(Converters::class)
-abstract class HomeDatabase : RoomDatabase() {
+abstract class HomeDB : RoomDatabase() {
 
     abstract fun homeDao(): HomeDao
 
     companion object {
 
         // For Singleton instantiation
-        @Volatile private var instance: HomeDatabase? = null
+        @Volatile private var instance: HomeDB? = null
 
-        fun getInstance(context: Context): HomeDatabase {
+        fun getInstance(context: Context): HomeDB {
             return instance ?: synchronized(this) {
-                instance ?: buildDatabase(context).also { instance = it }
+                instance
+                    ?: buildDatabase(context).also { instance = it }
             }
         }
 
         // Create and pre-populate the database. See this article for more details:
         // https://medium.com/google-developers/7-pro-tips-for-room-fbadea4bfbd1#4785
-        private fun buildDatabase(context: Context): HomeDatabase {
-            return Room.databaseBuilder(context, HomeDatabase::class.java, DATABASE_NAME)
+        private fun buildDatabase(context: Context): HomeDB {
+            return Room.databaseBuilder(context, HomeDB::class.java, DATABASE_NAME)
                     .addCallback(object : RoomDatabase.Callback() {
                         override fun onCreate(db: SupportSQLiteDatabase) {
                             super.onCreate(db)

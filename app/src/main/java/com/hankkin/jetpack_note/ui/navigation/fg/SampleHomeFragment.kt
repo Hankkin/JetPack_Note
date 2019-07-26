@@ -8,7 +8,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.hankkin.jetpack_note.R
-import com.hankkin.jetpack_note.data.Component
+import com.hankkin.jetpack_note.data.bean.Component
 import kotlinx.android.synthetic.main.fragment_sample_home.*
 
 /**
@@ -39,7 +39,7 @@ class SampleHomeFragment : Fragment() {
         }
 
 
-        val component = Component("1","我是传递过来实体类Component类型参数","","")
+        val component = Component("1", "我是传递过来实体类Component类型参数", "", "")
         //基本类型跳转
         btn_nav_sample_jump_argument_normal.setOnClickListener {
             val directions =
