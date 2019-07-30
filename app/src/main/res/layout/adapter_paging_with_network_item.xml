@@ -1,0 +1,51 @@
+<layout
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+                name="clickListener"
+                type="android.view.View.OnClickListener"/>
+        <variable
+                name="gank"
+                type="com.hankkin.jetpack_note.data.bean.Gank"/>
+    </data>
+
+
+    <LinearLayout
+            android:onClick="@{clickListener}"
+            android:focusable="true"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:background="?attr/selectableItemBackground"
+            android:padding="@dimen/dp10"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/normalTxt"
+                    android:text="@{gank.who}"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            <androidx.appcompat.widget.AppCompatTextView
+                    android:text="@{gank.source}"
+                    style="@style/smallTxt"
+                    android:layout_alignParentEnd="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:ignore="RelativeOverlap"/>
+        </RelativeLayout>
+
+        <TextView
+                android:layout_marginTop="@dimen/dp6"
+                android:text="@{gank.desc}"
+                style="@style/normalTxt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+    </LinearLayout>
+</layout>

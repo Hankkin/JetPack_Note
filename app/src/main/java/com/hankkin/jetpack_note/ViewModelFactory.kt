@@ -5,9 +5,11 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import com.hankkin.jetpack_note.data.respository.HomeRepository
 import com.hankkin.jetpack_note.data.respository.PagingRespository
+import com.hankkin.jetpack_note.data.respository.gank.GankRespository
 import com.hankkin.jetpack_note.ui.home.HomeListViewModel
 import com.hankkin.jetpack_note.ui.livedata.LiveDataViewModel
 import com.hankkin.jetpack_note.ui.paging.PagingWithDaoViewModel
+import com.hankkin.jetpack_note.ui.paging.PagingWithNetWorkViewModel
 import com.hankkin.jetpack_note.utils.Injection
 
 /**
@@ -16,7 +18,8 @@ import com.hankkin.jetpack_note.utils.Injection
  */
 class ViewModelFactory(
     private val homeRepository: HomeRepository,
-    private val pagingRepository: PagingRespository
+    private val pagingRepository: PagingRespository,
+    private val gankRespository: GankRespository
 ) : ViewModelProvider.NewInstanceFactory() {
 
     @Suppress("UNCHECKED_CAST")
@@ -32,6 +35,9 @@ class ViewModelFactory(
                 isAssignableFrom(PagingWithDaoViewModel::class.java) -> {
                     PagingWithDaoViewModel(pagingRepository)
                 }
+                isAssignableFrom(PagingWithNetWorkViewModel::class.java) -> {
+                    PagingWithNetWorkViewModel(gankRespository)
+                }
                 else ->
                     throw IllegalArgumentException("Unknown ViewModel: ${modelClass.name}")
             }
@@ -45,7 +51,8 @@ class ViewModelFactory(
             INSTANCE ?: synchronized(ViewModelFactory::class.java) {
                 INSTANCE ?: ViewModelFactory(
                     Injection.provideHomeRepository(application),
-                    Injection.providePagingRepository(application)
+                    Injection.providePagingRepository(application),
+                    Injection.provideGankRespository()
                 )
             }
     }
