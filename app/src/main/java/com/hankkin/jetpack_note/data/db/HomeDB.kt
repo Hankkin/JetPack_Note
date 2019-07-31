@@ -26,7 +26,7 @@ import androidx.work.OneTimeWorkRequestBuilder
 import androidx.work.WorkManager
 import com.hankkin.jetpack_note.data.Converters
 import com.hankkin.jetpack_note.data.bean.Component
-import com.hankkin.jetpack_note.utils.DATABASE_NAME
+import com.hankkin.jetpack_note.utils.Constants.DATABASE_NAME
 import com.hankkin.jetpack_note.workers.SeedDatabaseWorker
 
 /**

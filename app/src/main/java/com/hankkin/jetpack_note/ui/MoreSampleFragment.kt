@@ -22,15 +22,14 @@ import kotlinx.android.synthetic.main.layout_loading.*
  */
 class MoreSampleFragment : Fragment() {
 
-    private val mTitles = arrayOf("LiveData", "ViewModel", "Paging", "Room", "WorkManager", "Camera2")
+    private val mTitles = arrayOf("LiveData", "ViewModel", "Room", "WorkManager", "Camera2")
     private val mFgs by lazy {
         arrayOf(
             LiveDataFragment(),
             ViewModelFragment(),
-            LiveDataFragment(),
-            LiveDataFragment(),
-            LiveDataFragment(),
-            LiveDataFragment()
+            CodeFragment(),
+            CodeFragment(),
+            CodeFragment()
         )
     }
 

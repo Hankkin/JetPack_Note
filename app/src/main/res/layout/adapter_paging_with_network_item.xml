@@ -13,39 +13,52 @@
     </data>
 
 
-    <LinearLayout
-            android:onClick="@{clickListener}"
-            android:focusable="true"
-            android:clickable="true"
-            android:gravity="center_vertical"
-            android:background="?attr/selectableItemBackground"
-            android:padding="@dimen/dp10"
-            android:orientation="vertical"
+    <com.google.android.material.card.MaterialCardView
+            app:cardElevation="@dimen/dp2"
+            app:cardCornerRadius="@dimen/dp2"
+            android:layout_margin="@dimen/dp10"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
-
-        <RelativeLayout
+        <LinearLayout
+                android:onClick="@{clickListener}"
+                android:focusable="true"
+                android:clickable="true"
+                android:gravity="center_vertical"
+                android:background="?attr/selectableItemBackground"
+                android:paddingLeft="@dimen/dp12"
+                android:paddingRight="@dimen/dp12"
+                android:paddingTop="@dimen/dp16"
+                android:paddingBottom="@dimen/dp16"
+                android:orientation="vertical"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
-            <androidx.appcompat.widget.AppCompatTextView
-                    style="@style/normalTxt"
-                    android:text="@{gank.who}"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
-            <androidx.appcompat.widget.AppCompatTextView
-                    android:text="@{gank.source}"
-                    style="@style/smallTxt"
-                    android:layout_alignParentEnd="true"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    tools:ignore="RelativeOverlap"/>
-        </RelativeLayout>
 
-        <TextView
-                android:layout_marginTop="@dimen/dp6"
-                android:text="@{gank.desc}"
-                style="@style/normalTxt"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
-    </LinearLayout>
+            <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                <androidx.appcompat.widget.AppCompatTextView
+                        android:textColor="@color/theme"
+                        style="@style/smallTxt"
+                        android:text="@{gank.who}"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                <androidx.appcompat.widget.AppCompatTextView
+                        android:text="@{gank.published}"
+                        style="@style/smallTxt"
+                        android:layout_alignParentEnd="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:ignore="RelativeOverlap"/>
+            </RelativeLayout>
+
+            <TextView
+                    android:textColor="@color/black"
+                    android:layout_marginTop="@dimen/dp4"
+                    android:text="@{gank.desc}"
+                    style="@style/normalTxt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
 </layout>

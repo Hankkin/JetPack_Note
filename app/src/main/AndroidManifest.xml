@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="com.hankkin.jetpack_note">
+          xmlns:tools="http://schemas.android.com/tools" package="com.hankkin.jetpack_note">
 
     <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
@@ -8,11 +8,8 @@
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
-
     <uses-feature android:name="android.hardware.location.gps"/>
-
     <uses-permission android:name="android.permission.CAMERA"/>
-
     <uses-feature android:name="android.hardware.camera"/>
     <uses-feature android:name="android.hardware.camera.autofocus"/>
 
@@ -23,7 +20,9 @@
             android:icon="@mipmap/ic_launcher"
             android:label="@string/app_name"
             android:supportsRtl="true"
-            android:theme="@style/AppTheme">
+            android:theme="@style/AppTheme"
+            tools:ignore="GoogleAppIndexingWarning"
+            tools:targetApi="n">
         <activity android:name=".ui.paging.PagingWithNetWorkActivity">
         </activity>
         <activity android:name=".ui.paging.PagingWithDaoActivity">
@@ -49,6 +48,8 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
+
+        <activity android:name=".ui.other.CommonWebActivity"/>
     </application>
 
 </manifest>

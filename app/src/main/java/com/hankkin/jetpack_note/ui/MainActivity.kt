@@ -20,6 +20,7 @@ import com.hankkin.jetpack_note.R
 import com.hankkin.jetpack_note.databinding.ActivityMainBinding
 import com.hankkin.jetpack_note.utils.FloatWindowUtils
 import com.hankkin.jetpack_note.utils.StatusBarUtil
+import com.hankkin.jetpack_note.utils.ViewHelper
 import com.tbruyelle.rxpermissions2.RxPermissions
 
 class MainActivity : AppCompatActivity() {
@@ -41,7 +42,6 @@ class MainActivity : AppCompatActivity() {
         appBarConfiguration = AppBarConfiguration(
             setOf(
                 R.id.homeFragment,
-                R.id.codeFragment,
                 R.id.pagingDemoFragment,
                 R.id.navigationFragment,
                 R.id.lifecyclesFragment

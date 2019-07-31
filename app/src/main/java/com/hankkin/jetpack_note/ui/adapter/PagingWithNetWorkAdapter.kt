@@ -10,6 +10,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.hankkin.jetpack_note.data.NetworkState
 import com.hankkin.jetpack_note.data.bean.Gank
 import com.hankkin.jetpack_note.databinding.AdapterPagingWithNetworkItemBinding
+import com.hankkin.jetpack_note.ui.other.CommonWebActivity
 
 /**
  * created by Hankkin
@@ -44,7 +45,9 @@ class PagingWithNetWorkAdapter : PagedListAdapter<Gank, PagingWithNetWorkAdapter
 
     private fun createOnClickListener(item: Gank?): View.OnClickListener {
         return View.OnClickListener {
-            Toast.makeText(it.context, item?.url, Toast.LENGTH_SHORT).show()
+            item?.run {
+                CommonWebActivity.loadUrl(it.context, url, desc)
+            }
         }
     }
 

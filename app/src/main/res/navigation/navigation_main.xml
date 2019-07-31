@@ -16,14 +16,6 @@
                 app:exitAnim="@anim/slide_out_left"
                 app:popEnterAnim="@anim/slide_in_left"
                 app:popExitAnim="@anim/slide_out_right"/>
-
-        <action
-                android:id="@+id/action_homeFragment_to_moreSampleActivity"
-                app:destination="@id/moreSampleActivity"
-                app:enterAnim="@anim/slide_in_right"
-                app:exitAnim="@anim/slide_out_left"
-                app:popEnterAnim="@anim/slide_in_left"
-                app:popExitAnim="@anim/slide_out_right"/>
     </fragment>
 
     <fragment android:id="@+id/codeFragment"
@@ -95,11 +87,6 @@
               android:label="activity_view_model_share"
               tools:layout="@layout/activity_view_model_share"/>
 
-    <activity android:id="@+id/moreSampleActivity"
-              android:name="com.hankkin.jetpack_note.ui.MoreSampleActivity"
-              android:label="activity_more_sample"
-              tools:layout="@layout/activity_more_sample"/>
-
     <activity android:id="@+id/pagingWithDaoActivity"
               android:name="com.hankkin.jetpack_note.ui.paging.PagingWithDaoActivity"
               android:label="activity_paging_with_dao"
@@ -109,4 +96,9 @@
               android:name="com.hankkin.jetpack_note.ui.paging.PagingWithNetWorkActivity"
               android:label="activity_paging_with_net_work"
               tools:layout="@layout/activity_paging_with_net_work"/>
+
+    <fragment android:id="@+id/aboutFragment"
+              android:name="com.hankkin.jetpack_note.ui.AboutFragment"
+              android:label="@string/drawer_about"
+              tools:layout="@layout/fragment_about"/>
 </navigation>

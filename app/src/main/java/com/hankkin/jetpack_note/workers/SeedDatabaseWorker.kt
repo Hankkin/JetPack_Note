@@ -9,7 +9,7 @@ import com.google.gson.reflect.TypeToken
 import com.google.gson.stream.JsonReader
 import com.hankkin.jetpack_note.data.bean.Component
 import com.hankkin.jetpack_note.data.db.HomeDB
-import com.hankkin.jetpack_note.utils.COMPONENT_DATA_FILENAME
+import com.hankkin.jetpack_note.utils.Constants.COMPONENT_DATA_FILENAME
 import kotlinx.coroutines.coroutineScope
 
 /**

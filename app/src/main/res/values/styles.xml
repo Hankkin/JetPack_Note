@@ -32,6 +32,11 @@
         <item name="android:textSize">@dimen/sp16</item>
     </style>
 
+    <style name="blackTxt">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">@dimen/sp16</item>
+    </style>
+
     <style name="smallTxt">
         <item name="android:textColor">@color/titleTxt</item>
         <item name="android:textSize">@dimen/sp14</item>
@@ -43,5 +48,13 @@
         <attr name="shiftDuration" format="reference"/>
         <attr name="shiftInterpolator" format="reference"/>
     </declare-styleable>
+
+    <style name="BottomSheetDialog" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/bottomSheetStyleWrapper</item>
+    </style>
+
+    <style name="bottomSheetStyleWrapper" parent="Widget.Design.BottomSheet.Modal">
+        <item name="behavior_peekHeight">500dp</item>
+    </style>
 
 </resources>
