@@ -9,6 +9,7 @@ import com.hankkin.jetpack_note.utils.Injection
 /**
  * created by Hankkin
  * on 2019-07-30
+ * 干货数据工厂
  */
 class GankSourceFactory(private val api: Api = Injection.provideApi()) : DataSource.Factory<Int, Gank>(){
 

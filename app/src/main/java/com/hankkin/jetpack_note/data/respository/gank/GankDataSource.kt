@@ -14,6 +14,7 @@ import retrofit2.Response
 /**
  * created by Hankkin
  * on 2019-07-30
+ * 干货数据源
  */
 class GankDataSource(private val api: Api = Injection.provideApi()) : PageKeyedDataSource<Int, Gank>() {
 

@@ -21,6 +21,12 @@ import androidx.paging.PagedList
 
 /**
  * Data class that is necessary for a UI to show a listing and interact w/ the rest of the system
+ * 封装需要监听的对象和执行的操作，用于上拉下拉操作
+ * pagedList ： 数据列表
+ * networkState ： 网络状态
+ * refreshState ： 刷新状态
+ * refresh ： 刷新操作
+ * retry ： 重试操作
  */
 data class Listing<T>(
         // the LiveData of paged lists for the UI to observe

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+                                       xmlns:tools="http://schemas.android.com/tools"
+                                       android:layout_width="match_parent"
+                                       android:layout_height="match_parent"
+                                       android:background="@color/white"
+                                       tools:context=".ui.SettingFragment">
+
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+                android:clickable="true"
+                android:background="?attr/selectableItemBackground"
+                android:padding="@dimen/dp16"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:focusable="true">
+            <TextView
+                    android:textColor="@color/theme"
+                    android:text="@string/setting_common"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            <TextView
+                    style="@style/blackTxt"
+                    android:layout_marginTop="@dimen/dp10"
+                    android:text="@string/setting_check_update"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <View
+                android:background="@color/line"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"/>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+                android:clickable="true"
+                android:background="?attr/selectableItemBackground"
+                android:padding="@dimen/dp16"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:focusable="true">
+            <TextView
+                    android:textColor="@color/theme"
+                    android:text="@string/setting_help"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            <TextView
+                    style="@style/blackTxt"
+                    android:layout_marginTop="@dimen/dp10"
+                    android:text="@string/setting_project"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</androidx.core.widget.NestedScrollView>

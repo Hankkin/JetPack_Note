@@ -14,6 +14,11 @@ android {
         versionName rootProject.versionName
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         vectorDrawables.useSupportLibrary = true
+
+        ndk {
+            // 设置支持的SO库架构
+            abiFilters 'armeabi', 'x86', 'armeabi-v7a', 'x86_64', 'arm64-v8a'
+        }
     }
     buildTypes {
         release {
@@ -49,7 +54,7 @@ dependencies {
     implementation "androidx.navigation:navigation-fragment-ktx:$rootProject.navigationVersion"
     implementation "androidx.navigation:navigation-ui-ktx:$rootProject.navigationVersion"
     implementation "androidx.viewpager2:viewpager2:$rootProject.viewPager2Version"
-    implementation "androidx.paging:paging-runtime:$paging_version" // For Kotlin use paging-runtime-ktx
+    implementation "androidx.paging:paging-runtime:$paging_version" 
     implementation "androidx.paging:paging-runtime-ktx:$paging_version" // For Kotlin use paging-runtime-ktx
     // alternatively - without Android dependencies for testing
     testImplementation "androidx.paging:paging-common:$paging_version" // For Kotlin use paging-common-ktx
@@ -66,6 +71,9 @@ dependencies {
     implementation "com.squareup.retrofit2:retrofit:$retrofitVersion"
     implementation "com.squareup.retrofit2:converter-gson:$retrofitVersion"
     implementation "com.squareup.okhttp3:logging-interceptor:$okhttpLoggingInterceptorVersion"
+    //bugly
+    implementation 'com.tencent.bugly:crashreport_upgrade:3.0.1'
+    implementation 'com.tencent.bugly:nativecrashreport:3.7.1'
 
 
     //test

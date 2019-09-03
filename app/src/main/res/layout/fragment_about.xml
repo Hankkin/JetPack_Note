@@ -66,6 +66,7 @@
                 android:textStyle="bold"/>
 
         <TextView
+                android:lineSpacingExtra="@dimen/dp4"
                 android:layout_marginRight="@dimen/dp10"
                 android:layout_marginLeft="@dimen/dp10"
                 android:id="@+id/tv_about_user"
@@ -108,7 +109,7 @@
         <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/dp10"
+                android:layout_marginTop="@dimen/dp20"
                 android:gravity="center_horizontal"
                 android:orientation="horizontal">
 
@@ -140,9 +141,7 @@
                     android:layout_marginRight="@dimen/dp24"
                     android:src="@mipmap/about_csdn"/>
         </LinearLayout>
-
-        <androidx.appcompat.widget.LinearLayoutCompat
-                android:gravity="center"
+        <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/dp24"
@@ -152,18 +151,18 @@
                     android:id="@+id/tv_about_blog"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginRight="40dp"
+                    android:layout_marginLeft="40dp"
                     android:text="@string/about_blog"
             />
 
             <com.google.android.material.button.MaterialButton
+                    android:layout_marginEnd="40dp"
+                    android:layout_alignParentEnd="true"
                     android:id="@+id/tv_about_rate"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/about_rate"
             />
-        </androidx.appcompat.widget.LinearLayoutCompat>
-
-
+        </RelativeLayout>
     </androidx.appcompat.widget.LinearLayoutCompat>
 </androidx.core.widget.NestedScrollView>

@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">JetPack_Note</string>
+    <string name="app_name">JetPackNote</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="nav_header_title">Android Studio</string>
@@ -90,11 +90,15 @@
     <string name="about_blog">博客</string>
     <string name="about_close">关闭</string>
     <string name="about_rate">评分</string>
-    <string name="about_license_content">Copyright 2018 Hankkin \n </string>
-    <string name="about_use_content">Reading是一款基于WanAndroid OpenApi开发的阅读类工具，如果你是一个热衷于Android开发者，那么这款软件能帮助你阅读精品Android文章。
-        同时Reading中还包含"英文单词"、"账号本子"、"天气"、"查单词"、"快递查询"等小工具。项目基于"Kotlin+MVP"架构开发，风格大概也许属于Material Desgin原质化风格，包含主题颜色切换、百变Logo、
-        等功能。在此感谢WanAndroid的OpenApi,以及其它开源项目的贡献。</string>
+    <string name="about_license_content">Copyright 2019 Hankkin \n</string>
+    <string name="about_use_content">您好，欢迎使用JetpackNote！\nJetpackNote 是一款基于谷歌官方组件Jetpack开发的笔记项目，项目中包含了对各大组件的源码分析、Demo使用：Navigation、Lifecycles、Paging、LiveData、ViewModel等...
+        \n项目使用Kotlin语言进行编写，依赖库截止代码编写时为最新版本，具体相关介绍请查看Github。
+    </string>
 
     <string name="article_detail_share">分享</string>
     <string name="article_detail_open">浏览器打开</string>
+    <string name="setting_common">通用</string>
+    <string name="setting_check_update">检查更新</string>
+    <string name="setting_help">帮助</string>
+    <string name="setting_project">项目地址</string>
 </resources>
