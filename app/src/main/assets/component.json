@@ -33,18 +33,18 @@
     "id": "6",
     "title": "Paging",
     "description": "逐步从您的数据源按需加载信息",
-    "link": "https://www.yuque.com/hankkin/jetpack/paging"
+    "link": "https://juejin.im/post/5d63f620f265da03970bc76d"
   },
   {
     "id": "7",
     "title": "Room",
     "description": "流畅地访问 SQLite 数据库",
-    "link": "https://www.yuque.com/hankkin/jetpack/room"
+    "link": ""
   },
   {
     "id": "8",
     "title": "WorkManager",
     "description": "管理您的 Android 后台作业",
-    "link": "https://www.yuque.com/hankkin/jetpack/workmanager"
+    "link": ""
   }
 ]

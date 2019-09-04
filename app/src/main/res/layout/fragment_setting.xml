@@ -13,6 +13,7 @@
             android:layout_height="match_parent">
 
         <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/ll_setting_update"
                 android:clickable="true"
                 android:background="?attr/selectableItemBackground"
                 android:padding="@dimen/dp16"
@@ -40,6 +41,7 @@
                 android:layout_height="0.5dp"/>
 
         <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/ll_setting_github"
                 android:clickable="true"
                 android:background="?attr/selectableItemBackground"
                 android:padding="@dimen/dp16"

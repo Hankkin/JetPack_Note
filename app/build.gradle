@@ -72,8 +72,8 @@ dependencies {
     implementation "com.squareup.retrofit2:converter-gson:$retrofitVersion"
     implementation "com.squareup.okhttp3:logging-interceptor:$okhttpLoggingInterceptorVersion"
     //bugly
-    implementation 'com.tencent.bugly:crashreport_upgrade:3.0.1'
-    implementation 'com.tencent.bugly:nativecrashreport:3.7.1'
+    implementation 'com.tencent.bugly:crashreport_upgrade:latest.release'
+    implementation 'com.tencent.bugly:nativecrashreport:latest.release'
 
 
     //test

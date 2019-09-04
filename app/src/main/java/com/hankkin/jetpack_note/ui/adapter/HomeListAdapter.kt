@@ -3,6 +3,7 @@ package com.hankkin.jetpack_note.ui.adapter
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
@@ -11,33 +12,39 @@ import com.hankkin.jetpack_note.data.bean.Component
 import com.hankkin.jetpack_note.databinding.ListItemHomeBinding
 import com.hankkin.jetpack_note.ui.home.HomeFragmentDirections
 
-class HomeListAdapter : ListAdapter<Component,HomeListAdapter.ViewHolder>((ComponentDiffCallback())){
+class HomeListAdapter : ListAdapter<Component, HomeListAdapter.ViewHolder>((ComponentDiffCallback())) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         return ViewHolder(
             ListItemHomeBinding.inflate(
-            LayoutInflater.from(parent.context), parent, false))
+                LayoutInflater.from(parent.context), parent, false
+            )
+        )
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val item = getItem(position)
         holder.apply {
-            bind(createOnClickListener(item.link, item.title),item)
+            bind(createOnClickListener(item.link, item.title), item)
             itemView.tag = item
         }
     }
 
-    private fun createOnClickListener(link: String,title: String): View.OnClickListener {
+    private fun createOnClickListener(link: String, title: String): View.OnClickListener {
         return View.OnClickListener {
-            val direction = HomeFragmentDirections.actionNavigationFragmentToWebFragment(link,title)
-            it.findNavController().navigate(direction)
+            if (link.isEmpty()) {
+                Toast.makeText(it.context, "敬请期待...", Toast.LENGTH_SHORT).show()
+            } else {
+                val direction = HomeFragmentDirections.actionNavigationFragmentToWebFragment(link, title)
+                it.findNavController().navigate(direction)
+            }
         }
     }
 
 
     class ViewHolder(
         private val binding: ListItemHomeBinding
-    ): RecyclerView.ViewHolder(binding.root){
+    ) : RecyclerView.ViewHolder(binding.root) {
         fun bind(listener: View.OnClickListener, item: Component) {
             binding.apply {
                 clickListener = listener

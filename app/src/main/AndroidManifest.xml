@@ -8,13 +8,16 @@
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.READ_LOGS"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
     <uses-feature android:name="android.hardware.location.gps"/>
     <uses-permission android:name="android.permission.CAMERA"/>
     <uses-feature android:name="android.hardware.camera"/>
     <uses-feature android:name="android.hardware.camera.autofocus"/>
 
     <application
-            android:networkSecurityConfig="@xml/network_security_config"
             android:name=".JetApplication"
             android:allowBackup="true"
             android:icon="@mipmap/ic_launcher"
@@ -22,6 +25,7 @@
             android:supportsRtl="true"
             android:theme="@style/AppTheme"
             tools:ignore="GoogleAppIndexingWarning"
+            android:usesCleartextTraffic="true"
             tools:targetApi="n">
         <activity android:name=".ui.paging.PagingWithNetWorkActivity">
         </activity>
@@ -50,6 +54,20 @@
         </activity>
 
         <activity android:name=".ui.other.CommonWebActivity"/>
+        <activity
+                android:name="com.tencent.bugly.beta.ui.BetaActivity"
+                android:configChanges="keyboardHidden|orientation|screenSize|locale"
+                android:theme="@android:style/Theme.Translucent" />
+
+        <provider
+                android:name="androidx.core.content.FileProvider"
+                android:authorities="${applicationId}.fileProvider"
+                android:exported="false"
+                android:grantUriPermissions="true">
+            <meta-data
+                    android:name="android.support.FILE_PROVIDER_PATHS"
+                    android:resource="@xml/provider_paths"/>
+        </provider>
     </application>
 
 </manifest>
