@@ -1,8 +1,7 @@
 package com.hankkin.jetpack_note
 
-import android.annotation.SuppressLint
 import android.app.Application
-import com.tencent.bugly.crashreport.CrashReport
+import com.tencent.bugly.Bugly
 
 /**
  * created by ${Hankkin}
@@ -11,9 +10,9 @@ import com.tencent.bugly.crashreport.CrashReport
 
 class JetApplication : Application() {
 
-    @SuppressLint("MissingSuperCall")
     override fun onCreate() {
-        CrashReport.initCrashReport(applicationContext, "4d0b425df7", false)
+        super.onCreate()
+        Bugly.init(applicationContext, "4d0b425df7", false)
     }
 
 }

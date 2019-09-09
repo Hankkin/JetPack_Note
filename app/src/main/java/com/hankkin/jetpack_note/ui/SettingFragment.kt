@@ -28,7 +28,7 @@ class SettingFragment : Fragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         ll_setting_update.setOnClickListener {
-            Beta.checkUpgrade(true, true)
+            Beta.checkUpgrade(true, false)
         }
         ll_setting_github.setOnClickListener {
             activity?.let { it1 -> CommonWebActivity.loadUrl(it1, Constants.AboutUrl.JETPACK, Constants.AboutUrl.JETPACK_TITLE) }

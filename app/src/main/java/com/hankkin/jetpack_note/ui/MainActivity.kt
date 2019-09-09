@@ -2,7 +2,6 @@ package com.hankkin.jetpack_note.ui
 
 import android.Manifest
 import android.annotation.SuppressLint
-import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
@@ -20,7 +19,6 @@ import com.hankkin.jetpack_note.R
 import com.hankkin.jetpack_note.databinding.ActivityMainBinding
 import com.hankkin.jetpack_note.utils.FloatWindowUtils
 import com.hankkin.jetpack_note.utils.StatusBarUtil
-import com.hankkin.jetpack_note.utils.ViewHelper
 import com.tbruyelle.rxpermissions2.RxPermissions
 
 class MainActivity : AppCompatActivity() {
