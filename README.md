@@ -98,7 +98,7 @@ Jetpack 包含与平台 API 解除捆绑的 [androidx.*](https://developer.andro
 
 
 
-<img src="http://ww4.sinaimg.cn/large/006y8mN6ly1g6te5x7pntj30u01t040f.jpg" style="zoom:33%;" />
+<img src="http://ww4.sinaimg.cn/large/006y8mN6ly1g6te5x7pntj30u01t040f.jpg" style="zoom:20%;" />
 
 ## 4.2 Lifecycles
 
