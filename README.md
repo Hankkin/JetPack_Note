@@ -28,7 +28,9 @@ Jetpack note
 
 
 
-<img src="http://ww2.sinaimg.cn/large/006y8mN6ly1g6teej3gy1j305k05kmxm.jpg" style="zoom:80%;" />
+![](http://ww2.sinaimg.cn/large/006y8mN6ly1g6teej3gy1j305k05kmxm.jpg)
+
+
 
 
 
@@ -163,6 +165,8 @@ Map转换则演示通过转换存储在LiveData对象中的值，并向下传递
 
 
 
-<img src="http://ww2.sinaimg.cn/large/006y8mN6ly1g6teej3gy1j305k05kmxm.jpg" style="zoom:120%;" />
+![](http://ww2.sinaimg.cn/large/006y8mN6ly1g6teej3gy1j305k05kmxm.jpg)
+
+
 
 
